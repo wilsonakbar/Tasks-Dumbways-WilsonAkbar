@@ -59,5 +59,7 @@
               IP Broadcast : 192.168.1.255
 
 ##  3. Gunakan app.diagrams.net untuk membuat diagramnya, Referensi gambar sudah disertakan
-     ![Diagram Tanpa Judul (1)](https://github.com/wilsonakbar/devops18-dumbways-WilsonAkbar/assets/132327628/a60a3012-5398-467a-b039-2f443de13318)
+   ![Diagram Tanpa Judul (1)](https://github.com/wilsonakbar/devops18-dumbways-WilsonAkbar/assets/132327628/4f679c34-c888-41a2-bcb5-9c653aa3288d)
+![Diagram Tanpa Judul (1)](https://github.com/wilsonakbar/devops18-dumbways-WilsonAkbar/assets/132327628/38ec7a76-06ea-43e3-b59c-5cadb5bc53e8)
+  ![Diagram Tanpa Judul (1)](https://github.com/wilsonakbar/devops18-dumbways-WilsonAkbar/assets/132327628/a60a3012-5398-467a-b039-2f443de13318)
 
