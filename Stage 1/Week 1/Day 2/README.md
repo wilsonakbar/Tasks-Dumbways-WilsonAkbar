@@ -1,5 +1,5 @@
-Basic Shell & Computer Networking
-  1. Perbedaan antara IP Private & Public, serta IP Dynamic & Static
+# Basic Shell & Computer Networking
+ ## 1. Perbedaan antara IP Private & Public, serta IP Dynamic & Static
      
      IP Private
          Diberikan oleh ISP 
@@ -31,17 +31,33 @@ Basic Shell & Computer Networking
          Biasa di gunakan untuk kantor atau rumahan
          Penggunakan ip nya gratis
 
-  2. Buat rancangan sebuah jaringan dengan spesifikasi sebagai berikut!
+##  2. Buat rancangan sebuah jaringan dengan spesifikasi sebagai berikut!
         - CIDR Block : 192.168.1.xxx/24
         - Subnet : 255.255.255.0
         - Gateway : 192.168.1.1
 
-      Rancangan Jaringan
-        CIDR : 192.168.1.0/24
-          IP Pool
-          Network : 192.168.1.1
-          Host : 192.168.1.2 - 192.168.1.254
-          Broadcast : 192.168.1.255
+        Rancangan Jaringan
+          Subnet 1 : 192.168.1.0
+              IP Network : 192.168.1.1
+              Host pertama : 192.168.1.2
+              Host terakhir : 192.168.1.62
+              IP Broadcast : 192.168.1.63
+          Subnet 2 : 192.168.1.64
+              IP Network : 192.168.1.65
+              Host pertama : 192.168.1.66
+              Host terakhir : 192.168.1.126
+              IP Broadcast : 192.168.1.127
+          Subnet 3 : 192.168.1.128
+              IP Network : 192.168.1.129
+              Host pertama : 192.168.1.130
+              Host terakhir : 192.168.1.191
+              IP Broadcast : 192.168.1.192
+          Subnet 4 : 192.168.1.192
+              IP Network : 192.168.1.193
+              Host pertama : 192.168.1.194
+              Host terakhir : 192.168.1.254
+              IP Broadcast : 192.168.1.255
 
-  3. Gunakan app.diagrams.net untuk membuat diagramnya, Referensi gambar sudah disertakan
-     
+##  3. Gunakan app.diagrams.net untuk membuat diagramnya, Referensi gambar sudah disertakan
+     ![Diagram Tanpa Judul (1)](https://github.com/wilsonakbar/devops18-dumbways-WilsonAkbar/assets/132327628/a60a3012-5398-467a-b039-2f443de13318)
+
