@@ -1,11 +1,8 @@
 # Application in Server
  ## 1. Deploy Aplikasi wayshub-frontend (NodeJS)
   ### 1.1 Instalasi NVM dengan perintah
-    curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.38.0/install.sh | bash
-    
   ![Screenshot_1](https://github.com/wilsonakbar/devops18-dumbways-WilsonAkbar/assets/132327628/f8e77ccc-43b0-4132-af4c-1f88c8f19210)
-    
-    ```aadgagag```
+    curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.38.0/install.sh | bash
 
   
   
