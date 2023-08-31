@@ -2,7 +2,8 @@
  ## 1. Deploy Aplikasi wayshub-frontend (NodeJS)
   ### 1.1 Instalasi NVM dengan perintah
   ![Screenshot_1](https://github.com/wilsonakbar/devops18-dumbways-WilsonAkbar/assets/132327628/f8e77ccc-43b0-4132-af4c-1f88c8f19210)
-```curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.38.0/install.sh | bash
+```
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.38.0/install.sh | bash
 ```
   ### 1.2 Eksekusi NVM dan Instalasi NodeJS v14 dan V16 serta gunakan V16 dengan perintah
   ![Screenshot_2](https://github.com/wilsonakbar/devops18-dumbways-WilsonAkbar/assets/132327628/31c361d2-d1c6-4dbc-8b82-c3d9fbd91da6)
