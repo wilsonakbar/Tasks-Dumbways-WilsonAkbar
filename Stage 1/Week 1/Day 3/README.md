@@ -19,8 +19,8 @@ nvm install 16
 ```
 nvm use 16
 ```
-  ### 1.3 Clone direktori pada Git yang telah disediakan dengan perintah
-  ![Screenshot_3](https://github.com/wilsonakbar/devops18-dumbways-WilsonAkbar/assets/132327628/b36d45f2-1dfc-46b0-b57d-9956d4be1c89)
+### 1.3 Clone direktori pada Git yang telah disediakan dengan perintah
+![Screenshot_3](https://github.com/wilsonakbar/devops18-dumbways-WilsonAkbar/assets/132327628/b36d45f2-1dfc-46b0-b57d-9956d4be1c89)
 ```
 git clone https://github.com/dumbwaysdew/wayshub-frontend.git
 ```
@@ -29,8 +29,11 @@ git clone https://github.com/dumbwaysdew/wayshub-frontend.git
 ```
 cd wayshub-frontend
 ```
-![Screenshot_5](https://github.com/wilsonakbar/devops18-dumbways-WilsonAkbar/assets/132327628/1f5543b1-b4ef-497f-b498-8409108a4faf)
-
 ```
 npm install -y
+```
+### 1.5 Menjalankan aplikasi pada Directory wayshub-frontend
+![Screenshot_5](https://github.com/wilsonakbar/devops18-dumbways-WilsonAkbar/assets/132327628/1f5543b1-b4ef-497f-b498-8409108a4faf)
+```
+npm start
 ```
