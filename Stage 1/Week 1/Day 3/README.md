@@ -27,7 +27,7 @@ git clone https://github.com/dumbwaysdew/wayshub-frontend.git
 ### 1.4 Masuk direktori wayshub-frontend dan install npm
 ![Screenshot_4](https://github.com/wilsonakbar/devops18-dumbways-WilsonAkbar/assets/132327628/c5c03cde-6995-403e-9503-ecb8a8e1b5f4)
 ```
-cd wayshub-frontend
+cd wayshub-frontend/
 ```
 ```
 npm install -y
@@ -47,4 +47,14 @@ ifconfig
 ```
 192.168.145.200:3000
 ```
+## 2. Deploy Golang & Python dengan menampilkan nama masing-masing
+### 2.1 Instalasi GO
+![Screenshot_7](https://github.com/wilsonakbar/devops18-dumbways-WilsonAkbar/assets/132327628/c1877de0-ea83-4eb3-9777-eaaf0ce00006)
+```
+mkdir golang
+```
+```
+cd golang/
+```
+
 
