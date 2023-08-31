@@ -19,8 +19,12 @@ nvm install 16
 ```
 nvm use 16
 ```
-  ### 1.3 Clone Repository pada Git yang telah disediakan dengan perintah
+  ### 1.3 Clone direktori pada Git yang telah disediakan dengan perintah
   ![Screenshot_3](https://github.com/wilsonakbar/devops18-dumbways-WilsonAkbar/assets/132327628/b36d45f2-1dfc-46b0-b57d-9956d4be1c89)
 ```
 git clone https://github.com/dumbwaysdew/wayshub-frontend.git
 ```
+### 1.4 Masuk direktori wayshub-frontend dan install npm
+![Screenshot_4](https://github.com/wilsonakbar/devops18-dumbways-WilsonAkbar/assets/132327628/c5c03cde-6995-403e-9503-ecb8a8e1b5f4)
+```cd wayshub-frontend```
+```npm install -y```
