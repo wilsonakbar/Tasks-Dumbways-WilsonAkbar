@@ -35,15 +35,19 @@ https://cool-planets-nail.loca.lt
 ```
 https://ipv4.icanhazip.com/
 ```
-![Screenshot_25](https://github.com/wilsonakbar/devops18-dumbways-WilsonAkbar/assets/132327628/e69666b2-dc8a-4f3f-87fd-5e2d124793a8)
+![Screenshot_25](https://github.com/wilsonakbar/devops18-dumbways-WilsonAkbar/assets/132327628/f668572c-8440-4faa-b313-ea2b37a9eac0)
 ## 2. App python bisa diakses melalui localtunnel
-### 2.1 Menjalankan Localtunnel diatas port 5000 Python lalu copy link yang muncul paste pada browser
+### 2.1 Menjalankan Localtunnel diatas port 5000 Python (Python sudah harus di jalankan terlebih dahulu)
+![Screenshot_188](https://github.com/wilsonakbar/devops18-dumbways-WilsonAkbar/assets/132327628/a481ff82-3650-4c31-95f8-1238de92c310)
+```
+python3 index.py
+```
 ![Screenshot_26](https://github.com/wilsonakbar/devops18-dumbways-WilsonAkbar/assets/132327628/c32f9623-940f-4ab1-9d21-75299cfbf996)
 ```
 lt --port 5000
 ```
 ### 2.2 Membuka Localtunnel yang telah berjalan pada browser
-![Screenshot_26](https://github.com/wilsonakbar/devops18-dumbways-WilsonAkbar/assets/132327628/3fcd1e3d-b825-4759-8b1e-060422db3772)
+![Screenshot_266](https://github.com/wilsonakbar/devops18-dumbways-WilsonAkbar/assets/132327628/d3b432f6-e8e3-4551-9d63-108d69ce3686)
 ```
 https://pretty-horses-worry.loca.lt/
 ```
