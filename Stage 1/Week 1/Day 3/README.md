@@ -45,7 +45,7 @@ ifconfig
 ```
 ![Screenshot_6](https://github.com/wilsonakbar/devops18-dumbways-WilsonAkbar/assets/132327628/75b640f1-4b49-430f-a781-7f0150038bab)
 ```
-192.168.145.200:3000
+192.168.145.201:3000
 ```
 ## 2. Deploy Golang dengan menampilkan nama masing-masing
 ### 2.1 Buat direktori golang dan masuk dengan perintah
@@ -141,7 +141,7 @@ from flask import Flask
 app = Flask(__name__)
 @app.route("/")
 def helloworld():
-    return "Calvin Novryan Rahaditya"
+    return "Wilson Akbar"
 if __name__ == "__main__":
     app.run(host='0.0.0.0,port='5000')
 ```
@@ -152,6 +152,6 @@ python3 index.py
 ```
 ![Screenshot_18](https://github.com/wilsonakbar/devops18-dumbways-WilsonAkbar/assets/132327628/6edeafff-249e-4e50-a417-4b84f7b03f1c)
 ```
-192.168.145.200:5000
+192.168.145.201:5000
 ```
 ![Screenshot_66](https://github.com/wilsonakbar/devops18-dumbways-WilsonAkbar/assets/132327628/c613fc84-1cf0-4d1d-91aa-0a183a4ece1c)
