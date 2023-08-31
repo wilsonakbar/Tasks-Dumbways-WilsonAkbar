@@ -47,13 +47,13 @@ python3 index.py
 lt --port 5000
 ```
 ### 2.2 Membuka Localtunnel yang telah berjalan pada browser
-![Screenshot_266](https://github.com/wilsonakbar/devops18-dumbways-WilsonAkbar/assets/132327628/d3b432f6-e8e3-4551-9d63-108d69ce3686)
+![Screenshot_266](https://github.com/wilsonakbar/devops18-dumbways-WilsonAkbar/assets/132327628/7da633df-244b-4c84-add9-770fb68f4ae8)
 ```
-https://pretty-horses-worry.loca.lt/
+https://cyan-doodles-shop.loco.lt/
 ```
 ### 2.3 masukan IP Public yang kita dapat lalu submit
 ![Screenshot_23](https://github.com/wilsonakbar/devops18-dumbways-WilsonAkbar/assets/132327628/af6f86b4-202a-40fe-800b-db7bdd7db6ea)
 ```
 https://ipv4.icanhazip.com/
 ```
-![Screenshot_27](https://github.com/wilsonakbar/devops18-dumbways-WilsonAkbar/assets/132327628/dd798da4-7828-4095-8489-c6bc9eb049ce)
+![Screenshot_27](https://github.com/wilsonakbar/devops18-dumbways-WilsonAkbar/assets/132327628/84716778-89ce-4db2-9250-ca0b169d26d6)
