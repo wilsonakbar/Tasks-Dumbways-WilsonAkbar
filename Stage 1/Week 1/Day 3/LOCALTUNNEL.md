@@ -7,53 +7,49 @@ npm install -g localtunnel
 ```
 ### 1.2 Instalasi service Nginx
 ![Screenshot_20](https://github.com/wilsonakbar/devops18-dumbways-WilsonAkbar/assets/132327628/2d3a1949-86b1-4e13-886d-764bb250fd65)
-
 ```
 sudo apt install nginx
 ```
 ### 1.3 Jalankan service Nginx dengan ip address
 ![Screenshot_21](https://github.com/wilsonakbar/devops18-dumbways-WilsonAkbar/assets/132327628/89cd9408-1a54-4306-bec3-e0347aa8297c)
-
 ```
-
+192.168.145.201:5000
 ```
-### 1.
-
+![Screenshot_66](https://github.com/wilsonakbar/devops18-dumbways-WilsonAkbar/assets/132327628/e9c4cf8d-69a6-4c25-94e5-7e47c797cddf)
+### 1.4 Menjalankan Localtunnel diatas port 3000 NodeJS (NodeJS sudah harus di jalankan terlebih dahulu)
+![Screenshot_5](https://github.com/wilsonakbar/devops18-dumbways-WilsonAkbar/assets/132327628/9aaa3684-1e4f-41fc-90a1-798b637cefdd)
 ```
-
+npm start
 ```
-### 1.
-
+![Screenshot_22](https://github.com/wilsonakbar/devops18-dumbways-WilsonAkbar/assets/132327628/d84bd5d9-81e4-4754-85d1-323bb07899c5)
 ```
-
+lt --port 3000
 ```
-### 1.
-
+### 1.5 Membuka Localtunnel yang telah berjalan pada browser
+![Screenshot_24](https://github.com/wilsonakbar/devops18-dumbways-WilsonAkbar/assets/132327628/7566238b-2df9-491e-8aa9-6dfc78e6f396)
 ```
-
+https://cool-planets-nail.loca.lt
 ```
-### 1.
-
+### 1.6 masukan IP Public yang kita dapat lalu submit
+![Screenshot_23](https://github.com/wilsonakbar/devops18-dumbways-WilsonAkbar/assets/132327628/af6f86b4-202a-40fe-800b-db7bdd7db6ea)
 ```
-
+https://ipv4.icanhazip.com/
 ```
-### 1.
-
+![Screenshot_25](https://github.com/wilsonakbar/devops18-dumbways-WilsonAkbar/assets/132327628/e69666b2-dc8a-4f3f-87fd-5e2d124793a8)
+## 2. App python bisa diakses melalui localtunnel
+### 2.1 Menjalankan Localtunnel diatas port 5000 Python lalu copy link yang muncul paste pada browser
+![Screenshot_26](https://github.com/wilsonakbar/devops18-dumbways-WilsonAkbar/assets/132327628/c32f9623-940f-4ab1-9d21-75299cfbf996)
 ```
-
+lt --port 5000
 ```
-### 1.
-
+### 2.2 Membuka Localtunnel yang telah berjalan pada browser
+![Screenshot_26](https://github.com/wilsonakbar/devops18-dumbways-WilsonAkbar/assets/132327628/3fcd1e3d-b825-4759-8b1e-060422db3772)
 ```
-
+https://pretty-horses-worry.loca.lt/
 ```
-### 1.
-
+### 2.3 masukan IP Public yang kita dapat lalu submit
+![Screenshot_23](https://github.com/wilsonakbar/devops18-dumbways-WilsonAkbar/assets/132327628/af6f86b4-202a-40fe-800b-db7bdd7db6ea)
 ```
-
+https://ipv4.icanhazip.com/
 ```
-### 1.
-
-```
-
-```
+![Screenshot_27](https://github.com/wilsonakbar/devops18-dumbways-WilsonAkbar/assets/132327628/dd798da4-7828-4095-8489-c6bc9eb049ce)
