@@ -151,52 +151,7 @@ if __name__ == "__main__":
 python3 index.py
 ```
 ![Screenshot_18](https://github.com/wilsonakbar/devops18-dumbways-WilsonAkbar/assets/132327628/6edeafff-249e-4e50-a417-4b84f7b03f1c)
-
-![Screenshot_6](https://github.com/wilsonakbar/devops18-dumbways-WilsonAkbar/assets/132327628/75b640f1-4b49-430f-a781-7f0150038bab)
 ```
 192.168.145.200:5000
 ```
-### 2.
-
-```
-
-```
-
-### 2.
-
-```
-
-```
-
-### 2.
-
-```
-
-```
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+![Screenshot_66](https://github.com/wilsonakbar/devops18-dumbways-WilsonAkbar/assets/132327628/c613fc84-1cf0-4d1d-91aa-0a183a4ece1c)
