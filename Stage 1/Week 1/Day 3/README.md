@@ -13,7 +13,8 @@
      ```nvm install 14
      ```
      
-     ```nvm install 16
+     ```
+     nvm install 16
      ```
      
      ```nvm use 16
