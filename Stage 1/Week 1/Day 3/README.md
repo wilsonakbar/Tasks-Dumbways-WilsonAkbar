@@ -7,13 +7,13 @@
   ### 1.2 Eksekusi NVM dan Instalasi NodeJS v14 dan V16 serta gunakan V16 dengan perintah
   ![Screenshot_2](https://github.com/wilsonakbar/devops18-dumbways-WilsonAkbar/assets/132327628/31c361d2-d1c6-4dbc-8b82-c3d9fbd91da6)
   
-    exec bash
+    ```exec bash```
     
-    nvm install 14
+    ```nvm install 14```
     
-    nvm install 16
+    ```nvm install 16```
     
-    nvm use 16
+    ```nvm use 16```
   
   
     
