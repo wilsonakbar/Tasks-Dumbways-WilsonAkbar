@@ -19,12 +19,8 @@ nvm install 16
 ```
 nvm use 16
 ```
-No language indicated, so no syntax highlighting. 
-But let's throw in a <b>tag</b>.
-```
-  
-  
-    
   ### 1.3 Clone Repository pada Git yang telah disediakan dengan perintah
   ![Screenshot_3](https://github.com/wilsonakbar/devops18-dumbways-WilsonAkbar/assets/132327628/b36d45f2-1dfc-46b0-b57d-9956d4be1c89)
-    git clone https://github.com/dumbwaysdew/wayshub-frontend.git
+```
+git clone https://github.com/dumbwaysdew/wayshub-frontend.git
+```
