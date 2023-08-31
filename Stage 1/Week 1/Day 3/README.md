@@ -6,7 +6,7 @@
      curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.38.0/install.sh | bash
   ### 1.2 Eksekusi NVM dan Instalasi NodeJS v14 dan V16 serta gunakan V16 dengan perintah
   ![Screenshot_2](https://github.com/wilsonakbar/devops18-dumbways-WilsonAkbar/assets/132327628/31c361d2-d1c6-4dbc-8b82-c3d9fbd91da6)
-  ```javascript
+```javascript
 var s = "JavaScript syntax highlighting";
 alert(s);
 ```
