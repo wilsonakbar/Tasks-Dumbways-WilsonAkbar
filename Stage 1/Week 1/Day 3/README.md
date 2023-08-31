@@ -29,6 +29,8 @@ git clone https://github.com/dumbwaysdew/wayshub-frontend.git
 ```
 cd wayshub-frontend
 ```
+![Screenshot_5](https://github.com/wilsonakbar/devops18-dumbways-WilsonAkbar/assets/132327628/1f5543b1-b4ef-497f-b498-8409108a4faf)
+
 ```
 npm install -y
 ```
