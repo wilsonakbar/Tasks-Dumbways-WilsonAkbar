@@ -28,10 +28,7 @@ git restore --stage ayamgorengbaru
 ```
 ### 4.3 cara penggunaan git pull
 berfungsi untuk menyamakan version file repositori dari database online ke database lokal
-```
-git pull git@github.com:wilsonakbar/ayamgoreng.git
-```
 ![Screenshot_5](https://github.com/wilsonakbar/devops18-dumbways-WilsonAkbar/assets/132327628/c525ca1e-45f7-4d5d-9394-33e15a066744)
 ```
-git clone git@github.com:wilsonakbar/ayamgoreng.git
+git pull git@github.com:wilsonakbar/ayamgoreng.git
 ```
