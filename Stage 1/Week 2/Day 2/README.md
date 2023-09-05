@@ -76,5 +76,15 @@ echo "hallo wilson" > wilsonakbarfile
 ```
 berfungsi untuk mereplace semua data file wilsonakbarfile dengan hallo wilson
 ## 2. Penjelasan tool htop atau nmon
+### 2.1 htop
+htop merupakan perintah untuk memonitoring sistem, kita dapat melihat penggunaan memory, cpu, swap
+![Screenshot_7](https://github.com/wilsonakbar/devops18-dumbways-WilsonAkbar/assets/132327628/3bb07d27-ad00-4a91-aba5-396ff1666876)
+```
+sudo apt install htop -y
+```
+![Screenshot_8](https://github.com/wilsonakbar/devops18-dumbways-WilsonAkbar/assets/132327628/631d00f1-9af6-486d-98f6-ecad22f5e7cb)
+```
+htop
+```
 ## 3. buatlah BASH Script untuk instalasi nginx
 
