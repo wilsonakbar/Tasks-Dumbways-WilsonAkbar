@@ -46,7 +46,7 @@ grep wilson *
 ```
 berfungsi mencari teks dalam semua file
 ```
-### 4.1 sort
+### 4.1 grep
 Sort untuk mengurutkan data, baik itu secara ascending atau descending.
 ![Screenshot_5](https://github.com/wilsonakbar/devops18-dumbways-WilsonAkbar/assets/132327628/11323d41-c7dc-46ae-954e-82139d0ddb0e)
 ```
