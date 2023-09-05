@@ -87,4 +87,25 @@ sudo apt install htop -y
 htop
 ```
 ## 3. buatlah BASH Script untuk instalasi nginx
+### 3.1 pertama buat file script.sh
+![Screenshot_9](https://github.com/wilsonakbar/devops18-dumbways-WilsonAkbar/assets/132327628/1709b894-bfbb-41e8-b915-1d8abbc1b3e6)
+```
+nano script.sh
+```
+### 3.2 kemudian buat perintah seperti berikut
+![Screenshot_10](https://github.com/wilsonakbar/devops18-dumbways-WilsonAkbar/assets/132327628/72ab58b3-ab6a-4b2f-8e86-8c93098f651a)
+```
+#!/usr/bin/env bash
 
+sudo apt install nginx
+```
+### 3.3 jalankan Script dengan perintah
+![Screenshot_11](https://github.com/wilsonakbar/devops18-dumbways-WilsonAkbar/assets/132327628/e47629ca-2371-46bf-ab3e-e505b620d1c6)
+```
+sh script.sh
+```
+kemudian buka nginx dengan ip masing-masing
+![Screenshot_12](https://github.com/wilsonakbar/devops18-dumbways-WilsonAkbar/assets/132327628/6b314645-1dff-459f-a553-75cbb29f9bef)
+```
+http://192.168.245.100/
+```
