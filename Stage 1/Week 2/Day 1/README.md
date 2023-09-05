@@ -3,12 +3,57 @@
   Sistem kontrol versi terdistribusi (DVCS) membawa salinan lokal dari repositori lengkap ke komputer setiap anggota tim, sehingga mereka dapat melakukan, mencabangkan, dan menggabungkan secara lokal. Server tidak harus menyimpan file fisik untuk setiap cabang — server hanya memerlukan perbedaan antara setiap penerapan.
   
 ## 2. buat repository dengan nama makanan kesukaan kalian (diluar tugas) yang berisi 3 file dengan isi yang berbeda
-![Screenshot_1](https://github.com/wilsonakbar/devops18-dumbways-WilsonAkbar/assets/132327628/ca97d244-c448-4bbd-9c30-1d4c69c75bd5)
-disini saya membuat repository dengan nama ayamgoreng dengan masing-masing file ayamgorenggeprek, ayamgorengkecap, dan ayamgorengrica
+### 2.1 membuat repositori di github dengan nama ayamgoreng
+![Screenshot_6](https://github.com/wilsonakbar/devops18-dumbways-WilsonAkbar/assets/132327628/2f865670-5006-47c2-91ee-44fadfdf9ef8)
+### 2.2 membuat direktori ayamgoreng kemudian buat file didalam direktori ayamgoreng lalu pastikan file yang telah di buat
+![Screenshot_7](https://github.com/wilsonakbar/devops18-dumbways-WilsonAkbar/assets/132327628/61584389-2068-4801-82f9-5a9015e6fa53)
+```
+git init ayamgoreng
+```
+```
+cd ayamgoreng
+```
+```
+touch ayamgeprek ayamrica ayamkecap
+```
+```
+git status
+```
+### 2.3 tambahkan 3 file yang tadi kita buat ke github
+![Screenshot_8](https://github.com/wilsonakbar/devops18-dumbways-WilsonAkbar/assets/132327628/cdaac5f4-27df-45ea-bda9-9f1818c4c256)
+```
+git add ayamgeprek ayamrica ayamkecap
+```
+```
+git status
+```
+```
+git commit -m "first commit"
+```
+```
+git remote add origin git@github.com:wilsonakbar/ayamgoreng.git
+```
+### 2.4 buat branch lalu upload file yang sudah di tambah ke github
+![Screenshot_9](https://github.com/wilsonakbar/devops18-dumbways-WilsonAkbar/assets/132327628/a8273b4b-bc7a-4025-a9f4-30643397d8b6)
+```
+git branch -m main
+```
+```
+git push origin main
+```
 
 ## 3. Buat 2 branch Staging dan Production
-![Screenshot_2](https://github.com/wilsonakbar/devops18-dumbways-WilsonAkbar/assets/132327628/7434e96c-8fc7-451c-bd22-f2d792c6cc43)
 disini saya membuat branch sesuai dengan tugas dengan nama Staging dan Production
+![Screenshot_10](https://github.com/wilsonakbar/devops18-dumbways-WilsonAkbar/assets/132327628/b90e355d-dd93-4864-a8ce-618bf2592e29)
+```
+git branch Staging
+```
+```
+git branch Production
+```
+```
+git branch -a
+```
 
 ## 4. Cari 3 command git yang belum dijelaskan dan praktekkan
 ### 4.1 cara penggunaan git clone
