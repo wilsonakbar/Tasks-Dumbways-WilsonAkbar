@@ -45,8 +45,7 @@ berfungsi menghitung jumlah teks yang ada dalam file
 grep wilson *
 ```
 berfungsi mencari teks dalam semua file
-```
-### 4.1 grep
+### 4.1 sort
 Sort untuk mengurutkan data, baik itu secara ascending atau descending.
 ![Screenshot_5](https://github.com/wilsonakbar/devops18-dumbways-WilsonAkbar/assets/132327628/11323d41-c7dc-46ae-954e-82139d0ddb0e)
 ```
@@ -61,6 +60,21 @@ mengurutkan text dari yang terkecil sampai terbesar
 sort -r filehitung
 ```
 mengurutkan text dari yang terbesar sampai terkecil
+### 5.1 echo
+Echo digunakan untuk mencetak string / pesan dari hasil perintah lain.
+![Screenshot_6](https://github.com/wilsonakbar/devops18-dumbways-WilsonAkbar/assets/132327628/f493a593-9e40-45df-ac54-4eb3403bbb53)
+```
+echo "wilson akbar"
+```
+berfungsi untuk mencetak kata
+```
+echo "wilson akbar" >> wilsonakbarfile
+```
+berfungsi untuk mencetak data wilson akbar pada file wilsonakbarfile
+```
+echo "hallo wilson" > wilsonakbarfile
+```
+berfungsi untuk mereplace semua data file wilsonakbarfile dengan hallo wilson
 ## 2. Penjelasan tool htop atau nmon
 ## 3. buatlah BASH Script untuk instalasi nginx
 
