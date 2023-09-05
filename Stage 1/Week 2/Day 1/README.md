@@ -56,19 +56,19 @@ git branch -a
 ```
 
 ## 4. Cari 3 command git yang belum dijelaskan dan praktekkan
-### 4.1 cara penggunaan git clone
+### 4.1 git clone
 berfungsi untuk mengclone file repositori online agar kita dapat memodifikasi secara offline
 ![Screenshot_3](https://github.com/wilsonakbar/devops18-dumbways-WilsonAkbar/assets/132327628/e5fb5565-e272-4432-a21d-64534c5fd46c)
 ```
 git clone git@github.com:wilsonakbar/ayamgoreng.git
 ```
-### 4.2 cara penggunaan git restore
+### 4.2 git restore
 berfungsi untuk mengembalikan file yang add / tambahkan dari server lokal ke github
 ![Screenshot_4](https://github.com/wilsonakbar/devops18-dumbways-WilsonAkbar/assets/132327628/cdc88bba-1119-40c5-9ce7-3c9b33cced3d)
 ```
 git restore --stage ayamgorengbaru
 ```
-### 4.3 cara penggunaan git pull
+### 4.3 git pull
 berfungsi untuk menyamakan version file repositori dari database online ke database lokal
 ![Screenshot_5](https://github.com/wilsonakbar/devops18-dumbways-WilsonAkbar/assets/132327628/c525ca1e-45f7-4d5d-9394-33e15a066744)
 ```
