@@ -1,11 +1,27 @@
 # Web Server & Reverse Proxy
 ## 1. Buat 1 VM tambahan untuk nginx saja (Ini opsional ya, tidak wajib)
 Melakukan manipulasi pada sebuah file menggunakan terminal, tanpa menggunakan teks editor seperti nano.
-### 1.1 cat
-Cat adalah salah satu perintah yang berfungsi untuk membuat daftar konten atau isi file pada standard output (sdout). Yang kalian tahu pasti perintah cat hanya bisa untuk melihat isi dari suatu file, sebenarnya tidak hanya itu.
-![Screenshot_1](https://github.com/wilsonakbar/devops18-dumbways-WilsonAkbar/assets/132327628/eccdfa22-2155-44e9-abc3-ff3fdbbf795a)
+### 1.1 membuat 1 VM ubuntu seperti minggu pertama (ssh baru "akbar")
+![Screenshot_1](https://github.com/wilsonakbar/devops18-dumbways-WilsonAkbar/assets/132327628/31f1ef53-943f-4712-8e00-6841bda4b81b)
+### 1.2 melakukan update dan upgrade, kalian bisa menggunakan perintah di bawah ini.
+![Screenshot_2](https://github.com/wilsonakbar/devops18-dumbways-WilsonAkbar/assets/132327628/f684bbdd-8c71-41f2-947a-71793c7528d9)
 ```
-cat > filewilson
+sudo apt update; sudo apt upgrade
+```
+### 1.3 Selanjutnya kita akan coba untuk menginstall aplikasi Nginx.
+![Screenshot_3](https://github.com/wilsonakbar/devops18-dumbways-WilsonAkbar/assets/132327628/3c21ef6d-0301-40d3-adf0-4b2eeb29c1b6)
+```
+sudo apt install nginx
+```
+### 1.4 cek dengan menggunakan perintah dibawah ini
+![Screenshot_4](https://github.com/wilsonakbar/devops18-dumbways-WilsonAkbar/assets/132327628/e3e23555-4c96-4937-a0c5-756137dd6974)
+```
+sudo systemctl status nginx
+```
+### 1.5 coba buka browser kalian, lalu masukkan IP dari server kalian
+![Screenshot_5](https://github.com/wilsonakbar/devops18-dumbways-WilsonAkbar/assets/132327628/e192cf36-649e-40ad-8c02-693851e3e886)
+```
+192.168.245.99
 ```
 ## 2. Jalankan aplikasi Dumbflix menggunakan PM2
 ## 3. Buatlah reverse proxy dengan directory /etc/nginx/dumbways
