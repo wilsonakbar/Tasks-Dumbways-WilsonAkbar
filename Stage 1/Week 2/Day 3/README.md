@@ -24,5 +24,18 @@ sudo systemctl status nginx
 192.168.245.99
 ```
 ## 2. Jalankan aplikasi Dumbflix menggunakan PM2
+### 2.1 install PM2 dengan perintah sebagai berikut
+![Screenshot_6](https://github.com/wilsonakbar/devops18-dumbways-WilsonAkbar/assets/132327628/0deaf10d-5222-4089-a7b9-35cab9f09b81)
+```
+npm install pm2 -g
+```
+### 2.2 masuk pada direktori src pada Dumbflix lalu jalankan PM2
+![Screenshot_7](https://github.com/wilsonakbar/devops18-dumbways-WilsonAkbar/assets/132327628/da1ca7b2-4f6d-401b-ab43-dcf16590eac3)
+```
+cd src/
+```
+```
+pm2 start index.js
+```
 ## 3. Buatlah reverse proxy dengan directory /etc/nginx/dumbways
 ## 4. Dengan nginx, pastikan dumbflix bisa diakses ke domain yang diinginkan
