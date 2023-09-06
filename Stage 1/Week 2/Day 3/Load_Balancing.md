@@ -39,4 +39,5 @@ sudo systemctl status nginx
 ini adalah contoh saya menjalankan domain di browser yang terhubung dengan server kedua ssh akbar@192.168.245.99
 ![image](https://github.com/wilsonakbar/devops18-dumbways-WilsonAkbar/assets/132327628/ce796bea-19fb-46d1-abae-3db3a1b137ff)
 
-ini
+ini adalah contoh saya menjalankan domain di browser yang terhubung dengan server utama ssh wilson@192.168.245.100
+![Screenshot_21](https://github.com/wilsonakbar/devops18-dumbways-WilsonAkbar/assets/132327628/9d1de22f-be2f-4f84-a421-031b4be2af94)
