@@ -38,4 +38,74 @@ cd src/
 pm2 start index.js
 ```
 ## 3. Buatlah reverse proxy dengan directory /etc/nginx/dumbways
+### 3.1
+Pertama-tama masuk ke folder nginx setelah itu buat suatu directory baru telebih dahulu
+![Screenshot_8](https://github.com/wilsonakbar/devops18-dumbways-WilsonAkbar/assets/132327628/70f4ef35-dba7-4777-ab01-f6715096dd75)
+```
+cd /etc/nginx
+```
+```
+sudo mkdir dumbways
+```
+### 3.2
+Selanjutnya keluar dari directory dumbways, setelah itu masuk ke dalam file nginx.conf
+![Screenshot_9](https://github.com/wilsonakbar/devops18-dumbways-WilsonAkbar/assets/132327628/d699ef23-1f01-481e-ae1e-3eccc8a2e7a4)
+```
+sudo nano nginx.conf
+```
+### 3.1
+Selanjutnya pergi ke-bagian include, setelah itu masukan lokasi dari directory yang bersi konfigutasi yang sudah kalian buat tadi
+![Screenshot_10](https://github.com/wilsonakbar/devops18-dumbways-WilsonAkbar/assets/132327628/02d2afba-52ac-44b7-8b43-f1f01807e27f)
+```
+include /etc/nginx/dumbways/*;
+```
 ## 4. Dengan nginx, pastikan dumbflix bisa diakses ke domain yang diinginkan
+### 4.1 Setelah itu masuk ke directory yang sudah kalian buat, setelah itu buat suatu file dengan nama dumbflix.conf
+![Screenshot_11](https://github.com/wilsonakbar/devops18-dumbways-WilsonAkbar/assets/132327628/0dc64f85-0d59-4015-a88b-488b09fe90c1)
+```
+cd dumbways/
+```
+```
+sudo nano dumbflix.conf
+```
+### 4.2 Setelah itu masukkan konfigurasi berikut
+![Screenshot_12](https://github.com/wilsonakbar/devops18-dumbways-WilsonAkbar/assets/132327628/6e469621-5bcb-46b5-8436-1fb0d86a45fe)
+```
+server { 
+    server_name dumbflix.xyz; 
+  
+    location / { 
+             proxy_pass http://127.0.0.1:3000;
+    }
+}
+```
+### 4.3 setting host pada windows
+pertama buka file explorer
+![Screenshot_13](https://github.com/wilsonakbar/devops18-dumbways-WilsonAkbar/assets/132327628/ffb08317-e595-4ed1-89aa-ac710c27e560)
+```
+C:\Windows\System32\drivers\etc
+```
+### 4.4 buka file host menggunakan administrator notepad
+lalu pada bagian paling bawah tambahkan ip address dan domain yang sudah di configurasi pada server
+![Screenshot_14](https://github.com/wilsonakbar/devops18-dumbways-WilsonAkbar/assets/132327628/8b7f89c1-9de3-4594-ba25-8f1a5983b02e)
+```
+192.168.245.100 dumbflix.xyz
+```
+### 4.5 pastikan untuk melakukan pengecekan konfigurasi dengan menjalankan perintah :
+![Screenshot_15](https://github.com/wilsonakbar/devops18-dumbways-WilsonAkbar/assets/132327628/538c08b2-5c7e-4dae-9553-624d48118aed)
+```
+sudo nginx -t
+```
+### 4.6 Jika sudah sekarang kita tinggal melakukan reload dan mengecek status Nginx
+![Screenshot_16](https://github.com/wilsonakbar/devops18-dumbways-WilsonAkbar/assets/132327628/492c443e-cbd7-4a45-840c-102acc99be75)
+```
+sudo systemctl reload nginx
+```
+```
+sudo systemctl status nginx
+```
+### 4.7 Jika sudah sekarang coba buka web browser kalian setelah itu coba akses nama domain kalian
+![Screenshot_17](https://github.com/wilsonakbar/devops18-dumbways-WilsonAkbar/assets/132327628/eaebea9a-97be-455c-8728-5ae57ce8eeb4)
+
+kemudian jalankan npm start pada direktori dumbflix-frontend
+![Screenshot_18](https://github.com/wilsonakbar/devops18-dumbways-WilsonAkbar/assets/132327628/493b5933-dbf2-4893-afbe-71791baf417a)
