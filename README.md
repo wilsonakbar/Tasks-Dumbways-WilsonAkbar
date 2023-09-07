@@ -6,7 +6,7 @@
 #### [Challenge Day 3 - Localtunnel](https://github.com/wilsonakbar/devops18-dumbways-WilsonAkbar/blob/d9a9408dc7891c3770b84ac4f4cd96c1b8a8ede3/Stage%201/Week%201/Day%203/LOCALTUNNEL.md)
 #### [Challenge Day 3 - PM2](https://github.com/wilsonakbar/devops18-dumbways-WilsonAkbar/blob/d9a9408dc7891c3770b84ac4f4cd96c1b8a8ede3/Stage%201/Week%201/Day%203/PM2.md)
 ## [Week 2](https://github.com/wilsonakbar/devops18-dumbways-WilsonAkbar/tree/0929e843dc127a544949e1213dc32b5709ede0d7/Stage%201/Week%202)
-### [Task Day 1 - Version Control System](https://github.com/wilsonakbar/devops18-dumbways-WilsonAkbar/tree/0929e843dc127a544949e1213dc32b5709ede0d7/Stage%201/Week%202/Day%201)
+### [Task Day 1 - Version Control System](https://github.com/wilsonakbar/devops18-dumbways-WilsonAkbar/blob/0929e843dc127a544949e1213dc32b5709ede0d7/Stage%201/Week%202/Day%201/README.md)
 ### [Task Day 2 - Manage Server in Terminal](https://github.com/wilsonakbar/devops18-dumbways-WilsonAkbar/blob/0929e843dc127a544949e1213dc32b5709ede0d7/Stage%201/Week%202/Day%202/README.md)
 #### [Challenge Day 2 - BASH](https://github.com/wilsonakbar/devops18-dumbways-WilsonAkbar/blob/0929e843dc127a544949e1213dc32b5709ede0d7/Stage%201/Week%202/Day%202/BASH.md)
 ### [Task Day 3 - Web Server & Reverse Proxy](https://github.com/wilsonakbar/devops18-dumbways-WilsonAkbar/blob/89c6d3a2b723c3bab60a76dfca0ceb0c9b7e0458/Stage%201/Week%202/Day%203/README.md)
