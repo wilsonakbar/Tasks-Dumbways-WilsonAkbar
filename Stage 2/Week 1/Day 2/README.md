@@ -36,12 +36,12 @@ exec bash
 ```
 nvm install 16
 ```
-### 2.2 install PM2
+### 2.3 install PM2
 ![Screenshot_10](https://github.com/wilsonakbar/devops18-dumbways-WilsonAkbar/assets/132327628/e014fc54-681c-4eb6-be05-3468599739cc)
 ```
 npm install -g pm2
 ```
-### 2.3 deploy aplikasinya menggunakan PM2
+### 2.4 deploy aplikasinya menggunakan PM2
 ![Screenshot_11](https://github.com/wilsonakbar/devops18-dumbways-WilsonAkbar/assets/132327628/5f2d63e6-ff7e-4726-89c1-9e8409dd8f0f)
 ```
 cd wayshub-frontend/
