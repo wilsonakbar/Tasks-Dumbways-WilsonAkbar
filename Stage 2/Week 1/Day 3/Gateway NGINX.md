@@ -1,5 +1,5 @@
 # Gateway
-## 1. Gateway
+## 1. Installasi nginx di server gateway
 ### 1.1 pada ssh wilson-gateway sebelum install nginx terlebih dahulu update apt
 ![Screenshot_44](https://github.com/wilsonakbar/devops18-dumbways-WilsonAkbar/assets/132327628/9bb26ae5-17a0-408f-a2d3-5c98c8a446f8)
 ```
@@ -15,7 +15,8 @@ sudo apt install nginx
 ```
 sudo systemctl status nginx
 ```
-### 1.4 buat file config pada direktori
+## 2. Installasi nginx di server gateway
+### 2.1 buat file config pada direktori
 ![Screenshot_51](https://github.com/wilsonakbar/devops18-dumbways-WilsonAkbar/assets/132327628/e65d09b3-2989-42be-9814-131d68523589)
 ```
 cd /etc/nginx/sites-enabled/
@@ -23,7 +24,10 @@ cd /etc/nginx/sites-enabled/
 ```
 sudo nano rproxy.conf
 ```
-### 1.5 isi domain sesuai tugas
+## 3. Gunakan domain sesuai dengan nama kalian
+### 3.1 isi domain sesuai tugas
+- <nama>.studentdumbways.my.id (front-end)
+- api.<nama>.studentdumbways.my.id (back-end)
 ![Screenshot_47](https://github.com/wilsonakbar/devops18-dumbways-WilsonAkbar/assets/132327628/4a3b437e-bada-418b-bf79-1ac01facca95)
 ```
 server {
