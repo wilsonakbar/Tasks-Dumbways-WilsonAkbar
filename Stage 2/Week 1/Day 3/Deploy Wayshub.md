@@ -101,7 +101,7 @@ sudo apt install mysql-server
 ```
 ![Screenshot_24](https://github.com/wilsonakbar/devops18-dumbways-WilsonAkbar/assets/132327628/3bd438b9-663b-4369-867a-cc3304d0c6ce)
 ```
-sudo systemctl mysql.service
+sudo systemctl status mysql.service
 ```
 ### 3.4 kemudian buat password untuk user root dan tambah user baru sesuai nama
 ![Screenshot_25](https://github.com/wilsonakbar/devops18-dumbways-WilsonAkbar/assets/132327628/de350f79-4d81-4aef-be69-68502106643e)
