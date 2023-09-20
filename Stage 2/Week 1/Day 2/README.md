@@ -84,3 +84,5 @@ module.exports = {
 ```
 pm2 start
 ```
+## 3. Install dan konfigurasi database MySQL 
+### 3.1 Clone repository Wayshub frontend & backend
