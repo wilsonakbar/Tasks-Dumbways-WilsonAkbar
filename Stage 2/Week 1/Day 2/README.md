@@ -85,4 +85,116 @@ module.exports = {
 pm2 start
 ```
 ## 3. Install dan konfigurasi database MySQL 
-### 3.1 Clone repository Wayshub frontend & backend
+### 3.1 sebelum konfigurasi apt update terlebih dahulu
+![Screenshot_18](https://github.com/wilsonakbar/devops18-dumbways-WilsonAkbar/assets/132327628/dbf9cf0d-5d31-4006-ac61-7eb7aa07a932)
+```
+exec bash
+```
+```
+sudo apt update
+```
+### 3.2 masuk pada sources.list lalu ganti mirrors.idcloudhost.com menjadi archive.ubuntu.com
+![Screenshot_19](https://github.com/wilsonakbar/devops18-dumbways-WilsonAkbar/assets/132327628/363fe602-5079-4088-b563-598b54f30844)
+```
+sudo nano /etc/apt/sources.list
+```
+replace dengan menekan ctrl + \
+![Screenshot_20](https://github.com/wilsonakbar/devops18-dumbways-WilsonAkbar/assets/132327628/623be78f-2ab8-4564-83b7-6bf7f31a68a2)
+```
+mirrors.idcloudhost.com
+```
+![Screenshot_21](https://github.com/wilsonakbar/devops18-dumbways-WilsonAkbar/assets/132327628/bea60a71-e579-4649-93f6-a92d24fc3805)
+```
+archive.ubuntu.com
+```
+lalu enter dan replace all dengan menekan a
+![Screenshot_22](https://github.com/wilsonakbar/devops18-dumbways-WilsonAkbar/assets/132327628/f161cf8f-19bf-4287-9a5f-1bb75d20969f)
+### 3.3 kemudian Install database MySQL dan cek status MySQL
+![Screenshot_23](https://github.com/wilsonakbar/devops18-dumbways-WilsonAkbar/assets/132327628/672e0bfd-def4-4aa1-a18e-9609b4d82829)
+```
+sudo apt install mysql-server
+```
+![Screenshot_24](https://github.com/wilsonakbar/devops18-dumbways-WilsonAkbar/assets/132327628/3bd438b9-663b-4369-867a-cc3304d0c6ce)
+```
+sudo systemctl mysql.service
+```
+### 3.4 kemudian buat password untuk user root dan tambah user baru sesuai nama
+![Screenshot_25](https://github.com/wilsonakbar/devops18-dumbways-WilsonAkbar/assets/132327628/de350f79-4d81-4aef-be69-68502106643e)
+```
+sudo mysql -u root
+```
+```
+ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password by 'Wilson123';
+```
+```
+CREATE USER 'wilson'@'%' IDENTIFIED WITH mysql_native_password BY 'Wilson123';
+```
+### 3.5 setting mysql_secure_installation dan berikan hak akses pada user yang kita buat
+jalankan sekuritas mysql sesuai step by step
+![Screenshot_26](https://github.com/wilsonakbar/devops18-dumbways-WilsonAkbar/assets/132327628/6406bddb-6301-45e9-baf0-e733aec684cf)
+```
+sudo mysql_secure_installation
+```
+![Screenshot_27](https://github.com/wilsonakbar/devops18-dumbways-WilsonAkbar/assets/132327628/893ff124-9ac2-41ee-93fd-ecfc4ef42620)
+```
+sudo mysql -u root -p
+```
+```
+GRANT ALL PRIVILEGES ON *.* TO 'wilson'@'%';
+```
+### 3.6 kemudian konfigurasi config.json pada direktori wayshub-backend
+![Screenshot_28](https://github.com/wilsonakbar/devops18-dumbways-WilsonAkbar/assets/132327628/8766e05d-61af-440f-81ec-7249fd93dac5)
+```
+cd wayshub-backend/
+```
+```
+cd config/
+```
+```
+nano config.json
+```
+![Screenshot_29](https://github.com/wilsonakbar/devops18-dumbways-WilsonAkbar/assets/132327628/b5b38e94-bd81-4f49-ae5c-3c4aad812063)
+pada bagian ini ganti username password sesuai user yang sudah kita buat dan berikan nama database nya
+### 3.7 kemudian konfigurasi api.js pada direktori wayshub-frontend
+![Screenshot_30](https://github.com/wilsonakbar/devops18-dumbways-WilsonAkbar/assets/132327628/245cccfe-32f1-440a-a12f-fc16cc965780)
+```
+cd wayshub-frontend/
+```
+```
+cd src/
+```
+```
+cd config/
+```
+```
+nano api.js
+```
+![Screenshot_37](https://github.com/wilsonakbar/devops18-dumbways-WilsonAkbar/assets/132327628/9152135b-d7cc-4acb-8a6c-70046401e748)
+pada bagiaon ini ganti baseURL dengan ip kita masing-masing
+### 3.8 menggabungkan konfigurasi database yang kita buat
+![Screenshot_32](https://github.com/wilsonakbar/devops18-dumbways-WilsonAkbar/assets/132327628/b94281a3-a409-4674-8092-12530d37d3d4)
+```
+cd wayshub-backend/
+```
+```
+npm install -g sequelize-cli
+```
+```
+sequelize db:create
+```
+```
+sequelize db:migrate
+```
+### 3.9 jalankan ulang aplikasinya menggunakan PM2
+![Screenshot_33](https://github.com/wilsonakbar/devops18-dumbways-WilsonAkbar/assets/132327628/9cfe980e-fe2f-4c22-b5a7-841d903ac5c8)
+```
+pm2 start
+```
+![Screenshot_34](https://github.com/wilsonakbar/devops18-dumbways-WilsonAkbar/assets/132327628/54f6097b-3b6c-463f-9f6b-4cc5c6babf31)
+registrasi user pada fontend wayshub
+![Screenshot_35](https://github.com/wilsonakbar/devops18-dumbways-WilsonAkbar/assets/132327628/03929f6e-e54b-4e5b-9230-78b46962e326)
+kemudian login user yang telah kita buat
+![Screenshot_36](https://github.com/wilsonakbar/devops18-dumbways-WilsonAkbar/assets/132327628/a1210506-4f3e-407c-85f0-30ca1d38ac02)
+selesai buat akun wayshub
+
+
