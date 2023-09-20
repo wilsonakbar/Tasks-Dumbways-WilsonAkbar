@@ -1,4 +1,4 @@
-# Stage 1
+# [Stage 1](https://github.com/wilsonakbar/devops18-dumbways-WilsonAkbar/tree/e5c75e272dc3d89c5db3f56fb4b84049d996f6e6/Stage%201)
 ## [Week 1](https://github.com/wilsonakbar/devops18-dumbways-WilsonAkbar/tree/ea547f92ad9789719377fdfb302e1e45c3bf4ad0/Stage%201/Week%201)
 ### [Task Day 1 - Introduction to DevOps](https://github.com/wilsonakbar/devops18-dumbways-WilsonAkbar/blob/5c8ea539c58547d17122e86a361453a38b0e60c6/Stage%201/Week%201/Day%201/README.md)
 ### [Task Day 2 - Basic Shell & Computer Networking](https://github.com/wilsonakbar/devops18-dumbways-WilsonAkbar/blob/5c8ea539c58547d17122e86a361453a38b0e60c6/Stage%201/Week%201/Day%202/README.md)
@@ -11,3 +11,7 @@
 #### [Challenge Day 2 - BASH](https://github.com/wilsonakbar/devops18-dumbways-WilsonAkbar/blob/0929e843dc127a544949e1213dc32b5709ede0d7/Stage%201/Week%202/Day%202/BASH.md)
 ### [Task Day 3 - Web Server & Reverse Proxy](https://github.com/wilsonakbar/devops18-dumbways-WilsonAkbar/blob/89c6d3a2b723c3bab60a76dfca0ceb0c9b7e0458/Stage%201/Week%202/Day%203/README.md)
 #### [Challenge Day 3 - Load Balancing ](https://github.com/wilsonakbar/devops18-dumbways-WilsonAkbar/blob/89c6d3a2b723c3bab60a76dfca0ceb0c9b7e0458/Stage%201/Week%202/Day%203/Load_Balancing.md)
+# [tage 2](https://github.com/wilsonakbar/devops18-dumbways-WilsonAkbar/tree/e5c75e272dc3d89c5db3f56fb4b84049d996f6e6/Stage%202/Week%201)
+## [Week 1]()
+### [Task Day 1]()
+### [Task Day 2](https://github.com/wilsonakbar/devops18-dumbways-WilsonAkbar/tree/e5c75e272dc3d89c5db3f56fb4b84049d996f6e6/Stage%202/Week%201/Day%202)
