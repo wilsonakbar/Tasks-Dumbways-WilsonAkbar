@@ -12,7 +12,10 @@
 ### [Task Day 3 - Web Server & Reverse Proxy](https://github.com/wilsonakbar/devops18-dumbways-WilsonAkbar/blob/89c6d3a2b723c3bab60a76dfca0ceb0c9b7e0458/Stage%201/Week%202/Day%203/README.md)
 #### [Challenge Day 3 - Load Balancing ](https://github.com/wilsonakbar/devops18-dumbways-WilsonAkbar/blob/89c6d3a2b723c3bab60a76dfca0ceb0c9b7e0458/Stage%201/Week%202/Day%203/Load_Balancing.md)
 
-# [Stage 2](https://github.com/wilsonakbar/devops18-dumbways-WilsonAkbar/tree/e5c75e272dc3d89c5db3f56fb4b84049d996f6e6/Stage%202/Week%201)
+# [Stage 2](https://github.com/wilsonakbar/devops18-dumbways-WilsonAkbar/tree/e92d02781a94828b23dfd96b3e68a07a2896b555/Stage%202)
 ## [Week 1]()
 ### [Task Day 1]()
-### [Task Day 2](https://github.com/wilsonakbar/devops18-dumbways-WilsonAkbar/tree/e5c75e272dc3d89c5db3f56fb4b84049d996f6e6/Stage%202/Week%201/Day%202)
+### [Task Day 2]()
+### [Task Day 3](https://github.com/wilsonakbar/devops18-dumbways-WilsonAkbar/blob/e92d02781a94828b23dfd96b3e68a07a2896b555/Stage%202/Week%201/Day%203/README.md)
+#### [Gateway](https://github.com/wilsonakbar/devops18-dumbways-WilsonAkbar/blob/e92d02781a94828b23dfd96b3e68a07a2896b555/Stage%202/Week%201/Day%203/Gateway%20NGINX.md)
+#### [Appserver](https://github.com/wilsonakbar/devops18-dumbways-WilsonAkbar/blob/e92d02781a94828b23dfd96b3e68a07a2896b555/Stage%202/Week%201/Day%203/Deploy%20Wayshub.md)
