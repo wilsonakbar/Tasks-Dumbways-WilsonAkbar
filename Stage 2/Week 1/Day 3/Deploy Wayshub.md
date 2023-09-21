@@ -127,6 +127,10 @@ sudo mysql -u root -p
 ```
 GRANT ALL PRIVILEGES ON *.* TO 'wilson'@'%';
 ```
+atau
+```
+GRANT ALL PRIVILEGES ON *.* TO 'wilson'@'%' WITH GRANT OPTION;
+```
 ## 4. Di wayshub-frontend, rubah isi BaseURL file src/config/api.js menggunakan domain yang sudah disediakan (api.<nama>.studentdumbways.my.id)
 ### 4.1 kemudian konfigurasi api.js pada direktori wayshub-frontend
 ![Screenshot_30](https://github.com/wilsonakbar/devops18-dumbways-WilsonAkbar/assets/132327628/2ef67eba-5ee5-4cd1-8079-4e858e73b001)
