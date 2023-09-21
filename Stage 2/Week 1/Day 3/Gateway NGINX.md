@@ -17,9 +17,12 @@ sudo systemctl status nginx
 ```
 ## 2. Installasi nginx di server gateway
 ### 2.1 buat file config pada direktori
-![Screenshot_51](https://github.com/wilsonakbar/devops18-dumbways-WilsonAkbar/assets/132327628/e65d09b3-2989-42be-9814-131d68523589)
+![Screenshot_68](https://github.com/wilsonakbar/devops18-dumbways-WilsonAkbar/assets/132327628/a828c1ab-cd50-4c31-afdc-41b44a2b180c)
 ```
-cd /etc/nginx/sites-enabled/
+cd /etc/nginx/
+```
+```
+sudo mkdir dumbways
 ```
 ```
 sudo nano rproxy.conf
