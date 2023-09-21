@@ -181,9 +181,12 @@ sequelize db:migrate
 ```
 pm2 start
 ```
-![Screenshot_34](https://github.com/wilsonakbar/devops18-dumbways-WilsonAkbar/assets/132327628/54f6097b-3b6c-463f-9f6b-4cc5c6babf31)
+![Screenshot_64](https://github.com/wilsonakbar/devops18-dumbways-WilsonAkbar/assets/132327628/ccaf3680-34eb-4038-9ad4-830ebfe6aec5)
 registrasi user pada fontend wayshub
-![Screenshot_35](https://github.com/wilsonakbar/devops18-dumbways-WilsonAkbar/assets/132327628/03929f6e-e54b-4e5b-9230-78b46962e326)
-kemudian login user yang telah kita buat
-![Screenshot_36](https://github.com/wilsonakbar/devops18-dumbways-WilsonAkbar/assets/132327628/a1210506-4f3e-407c-85f0-30ca1d38ac02)
-selesai buat akun wayshub
+![Screenshot_65](https://github.com/wilsonakbar/devops18-dumbways-WilsonAkbar/assets/132327628/03cc8131-b31d-4c89-b128-9d4850280522)
+registrasi user berhasil
+![Screenshot_66](https://github.com/wilsonakbar/devops18-dumbways-WilsonAkbar/assets/132327628/b910cbbe-8ba4-43af-88a7-b93340508c36)
+test login menggunakan user yang telah di buat
+![Screenshot_67](https://github.com/wilsonakbar/devops18-dumbways-WilsonAkbar/assets/132327628/9a5d3a58-0209-4e38-aa67-3cdcf3fa9515)
+sukses masuk dengan user yang telah di buat
+
