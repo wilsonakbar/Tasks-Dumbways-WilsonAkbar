@@ -14,8 +14,8 @@
 
 # [Stage 2](https://github.com/wilsonakbar/devops18-dumbways-WilsonAkbar/tree/e92d02781a94828b23dfd96b3e68a07a2896b555/Stage%202)
 ## [Week 1]()
-### [Task Day 1]()
-### [Task Day 2]()
-### [Task Day 3](https://github.com/wilsonakbar/devops18-dumbways-WilsonAkbar/blob/e92d02781a94828b23dfd96b3e68a07a2896b555/Stage%202/Week%201/Day%203/README.md)
+### [Task Day 1 - First Briefing - DevOps]()
+### [Task Day 2 - Cloud Computing]()
+### [Task Day 3 - Manage Database w/ Backend](https://github.com/wilsonakbar/devops18-dumbways-WilsonAkbar/blob/e92d02781a94828b23dfd96b3e68a07a2896b555/Stage%202/Week%201/Day%203/README.md)
 #### [Gateway](https://github.com/wilsonakbar/devops18-dumbways-WilsonAkbar/blob/e92d02781a94828b23dfd96b3e68a07a2896b555/Stage%202/Week%201/Day%203/Gateway%20NGINX.md)
 #### [Appserver](https://github.com/wilsonakbar/devops18-dumbways-WilsonAkbar/blob/e92d02781a94828b23dfd96b3e68a07a2896b555/Stage%202/Week%201/Day%203/Deploy%20Wayshub.md)
