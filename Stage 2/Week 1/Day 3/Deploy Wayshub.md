@@ -146,8 +146,8 @@ cd config/
 ```
 nano api.js
 ```
-![Screenshot_60](https://github.com/wilsonakbar/devops18-dumbways-WilsonAkbar/assets/132327628/3297dcf2-eaf1-416b-9b81-d042264a411a)
-pada bagiaon ini ganti baseURL dengan ip kita masing-masing
+![Screenshot_62](https://github.com/wilsonakbar/devops18-dumbways-WilsonAkbar/assets/132327628/806380ad-d0c9-48d0-b510-7ff4e5989277)
+pada bagiaon ini ganti baseURL dengan domain kita masing-masing
 ## 5. Di wayshub-backend, rubah isi konfigurasi database MySQL di config/config.json sesuai dengan user pass kalian, dengan nama database "db-wayshub"
 ### 5.1 kemudian konfigurasi config.json pada direktori wayshub-backend
 ![Screenshot_28](https://github.com/wilsonakbar/devops18-dumbways-WilsonAkbar/assets/132327628/8766e05d-61af-440f-81ec-7249fd93dac5)
