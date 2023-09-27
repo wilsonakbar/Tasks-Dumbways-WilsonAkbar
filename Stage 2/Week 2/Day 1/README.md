@@ -56,12 +56,16 @@ docker -v
 
 
 ## 2. Deploy Aplikasi - menggunakan database MySQL & berfungsi dengan baik, Jalankan on top Docker, gunakan docker-compose, Push image ke hub Docker menggunakan akun masing-masing
-### 2.1 Clone repository Wayshub frontend
+### 2.1 Clone repository Wayshub frontend dan backend
 ![image](https://github.com/wilsonakbar/devops18-dumbways-WilsonAkbar/assets/132327628/1e4e9442-3308-40fc-8b28-d34748ca5586)
 ```
 git clone https://github.com/dumbwaysdev/wayshub-frontend
 ```
-### 2.2 install base image node 10.24.1-alpen pada direktori wayshub-frontend
+![Screenshot_69](https://github.com/wilsonakbar/devops18-dumbways-WilsonAkbar/assets/132327628/46e76b3e-ab2f-43df-9fec-2114d9b3ec44)
+```
+git clone https://github.com/dumbwaysdev/wayshub-backend
+```
+### 2.2 install base image node 10.24.1-alpen pada direktori wayshub-frontend dan backend
 ![image](https://github.com/wilsonakbar/devops18-dumbways-WilsonAkbar/assets/132327628/aae4adf6-8327-413e-8da1-d71f3cd8999a)
 ![image](https://github.com/wilsonakbar/devops18-dumbways-WilsonAkbar/assets/132327628/468ea506-12ff-497f-b4d9-423d5b2fe05c)
 ```
