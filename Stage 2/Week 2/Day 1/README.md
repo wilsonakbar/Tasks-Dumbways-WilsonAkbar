@@ -106,18 +106,55 @@ docker build -t wilson/wayshub-frontend .
 ```
 docker build -t wilson/wayshub-backend .
 ```
-
-
+### 2.5 jalankan aplikasi dengan docker kompos
 ![image](https://github.com/wilsonakbar/devops18-dumbways-WilsonAkbar/assets/132327628/dbb650cc-b7ab-42b3-bd8a-6794ada39508)
+```
 nano docker-compose.yml
+```
+![image](https://github.com/wilsonakbar/devops18-dumbways-WilsonAkbar/assets/132327628/62fd5289-f050-489b-813f-c4e61ac15272)
+```
+---
+version: "3.8"
+services:
+  frontend:
+    container_name: wayshub-frontend
+    image: wilson/wayshub-frontend:latest
+    stdin_open: true
+    ports:
+      - 13000:3000
+
+  database:
+    container_name: wayshub-db
+    image: mysql:latest
+    volumes:
+      - ~/mysql-data:/var/lib/mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: Wilson123
+      MYSQL_USER: wilson
+      MYSQL_PASSWORD: Wilson123
+      MYSQL_DATABASE: db-wayshub
+    
+    ports:
+      - 13306:3306
+  backend:
+    container_name: wayshub-backend
+    image: wilson/wayshub-backend:latest
+    stdin_open: true
+    ports:
+      - 15000:5000
+```
 ![image](https://github.com/wilsonakbar/devops18-dumbways-WilsonAkbar/assets/132327628/6fa991f6-e46a-4db6-91c1-3c91f559bcd1)
+```
 docker compose up
+```
 
 
 
+```
 nano Dockerfile
 ```
 ![image](https://github.com/wilsonakbar/devops18-dumbways-WilsonAkbar/assets/132327628/8e31ee57-a3fc-4482-b95e-030a570ce023)
+
 ### 2.4 jalankan build doker untuk direktori wayshub-frontend
 ![image](https://github.com/wilsonakbar/devops18-dumbways-WilsonAkbar/assets/132327628/df497f89-a82a-4b8e-9079-d05ccce885d2)
 ```
@@ -130,5 +167,4 @@ docker build -t wayshub-frontend .
 
 ### 1.
 ```
-
 ```
