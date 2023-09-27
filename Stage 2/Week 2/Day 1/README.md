@@ -67,13 +67,54 @@ git clone https://github.com/dumbwaysdev/wayshub-backend
 ```
 ### 2.2 install base image node 10.24.1-alpen pada direktori wayshub-frontend dan backend
 ![image](https://github.com/wilsonakbar/devops18-dumbways-WilsonAkbar/assets/132327628/aae4adf6-8327-413e-8da1-d71f3cd8999a)
+```
+https://hub.docker.com/_/node/tags?page=1&name=10.24.1
+```
 ![image](https://github.com/wilsonakbar/devops18-dumbways-WilsonAkbar/assets/132327628/468ea506-12ff-497f-b4d9-423d5b2fe05c)
+![image](https://github.com/wilsonakbar/devops18-dumbways-WilsonAkbar/assets/132327628/6b7b7160-308d-4de4-b27d-51b35a8d15c7)
 ```
 docker pull node:10.24.1-alpine
 ```
-### 2.3 buat file dockerfile pada direktori wayshub-frontend
-![Screenshot_27](https://github.com/wilsonakbar/devops18-dumbways-WilsonAkbar/assets/132327628/017d8c39-9cc9-4185-a94a-38505ff7e0bc)
+### 2.3 buat file dockerfile pada direktori wayshub-frontend dan backend
 ```
+nano Dockerfile
+```
+![image](https://github.com/wilsonakbar/devops18-dumbways-WilsonAkbar/assets/132327628/b6460c82-a85e-4b3c-a1bd-dfff9cac3db1)
+```
+FROM node:10.24.1-alpine
+WORKDIR /app
+COPY . .
+RUN npm install
+EXPOSE 3000
+CMD ["npm","start"]
+```
+![image](https://github.com/wilsonakbar/devops18-dumbways-WilsonAkbar/assets/132327628/d4999c83-7a25-486c-a964-a4adfbaece16)
+```
+FROM node:10.24.1-alpine
+WORKDIR /app
+COPY . .
+RUN npm install
+EXPOSE 5000
+CMD ["npm","start"]
+```
+### 2.4 buat image lokal pada masing - masing direktori wayshub-frontend dan backend
+![image](https://github.com/wilsonakbar/devops18-dumbways-WilsonAkbar/assets/132327628/d06d83fe-225d-4f15-8544-4bfd93628311)
+```
+docker build -t wilson/wayshub-frontend .
+```
+![image](https://github.com/wilsonakbar/devops18-dumbways-WilsonAkbar/assets/132327628/9506ac12-c330-4d0f-a0cc-00a87497a525)
+```
+docker build -t wilson/wayshub-backend .
+```
+
+
+![image](https://github.com/wilsonakbar/devops18-dumbways-WilsonAkbar/assets/132327628/dbb650cc-b7ab-42b3-bd8a-6794ada39508)
+nano docker-compose.yml
+![image](https://github.com/wilsonakbar/devops18-dumbways-WilsonAkbar/assets/132327628/6fa991f6-e46a-4db6-91c1-3c91f559bcd1)
+docker compose up
+
+
+
 nano Dockerfile
 ```
 ![image](https://github.com/wilsonakbar/devops18-dumbways-WilsonAkbar/assets/132327628/8e31ee57-a3fc-4482-b95e-030a570ce023)
