@@ -61,13 +61,23 @@ docker -v
 ```
 git clone https://github.com/dumbwaysdev/wayshub-frontend
 ```
+### 2.2 install base image node 10.24.1-alpen pada direktori wayshub-frontend
+![image](https://github.com/wilsonakbar/devops18-dumbways-WilsonAkbar/assets/132327628/aae4adf6-8327-413e-8da1-d71f3cd8999a)
+![image](https://github.com/wilsonakbar/devops18-dumbways-WilsonAkbar/assets/132327628/468ea506-12ff-497f-b4d9-423d5b2fe05c)
+```
+docker pull node:10.24.1-alpine
+```
+### 2.3 buat file dockerfile pada direktori wayshub-frontend
 ![Screenshot_27](https://github.com/wilsonakbar/devops18-dumbways-WilsonAkbar/assets/132327628/017d8c39-9cc9-4185-a94a-38505ff7e0bc)
-
-
-![Screenshot_28](https://github.com/wilsonakbar/devops18-dumbways-WilsonAkbar/assets/132327628/d2ee91d3-3940-4972-af9b-34bf84cff73a)
-
-
-
+```
+nano Dockerfile
+```
+![image](https://github.com/wilsonakbar/devops18-dumbways-WilsonAkbar/assets/132327628/8e31ee57-a3fc-4482-b95e-030a570ce023)
+### 2.4 jalankan build doker untuk direktori wayshub-frontend
+![image](https://github.com/wilsonakbar/devops18-dumbways-WilsonAkbar/assets/132327628/df497f89-a82a-4b8e-9079-d05ccce885d2)
+```
+docker build -t wayshub-frontend .
+```
 
 
 
