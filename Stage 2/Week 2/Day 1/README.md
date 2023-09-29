@@ -156,11 +156,20 @@ docker images
 docker ps -a
 ```
 ### 2.7 Push image ke hub Docker menggunakan akun masing-masing
+masukan username dan password
 ![Screenshot_72](https://github.com/wilsonakbar/devops18-dumbways-WilsonAkbar/assets/132327628/fd100983-97f3-44cf-a2d4-230833c5d0c8)
 ```
 docker login
 ```
-lalu masukan 
+lalukan pada semua image yang mau kita push
+![Screenshot_75](https://github.com/wilsonakbar/devops18-dumbways-WilsonAkbar/assets/132327628/bb4bef7f-5be0-48c8-a1b6-59c79b181a96)
+```
+docker push wilsonakbar/wayshub-frontend
+```
+
+
+
+
 nano Dockerfile
 ```
 ![image](https://github.com/wilsonakbar/devops18-dumbways-WilsonAkbar/assets/132327628/8e31ee57-a3fc-4482-b95e-030a570ce023)
