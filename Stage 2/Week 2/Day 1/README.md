@@ -111,14 +111,14 @@ docker build -t wilson/wayshub-backend .
 ```
 nano docker-compose.yml
 ```
-![image](https://github.com/wilsonakbar/devops18-dumbways-WilsonAkbar/assets/132327628/62fd5289-f050-489b-813f-c4e61ac15272)
+![Screenshot_73](https://github.com/wilsonakbar/devops18-dumbways-WilsonAkbar/assets/132327628/7974ec1b-bcc5-47d5-89ff-4df98f951e32)
 ```
 ---
 version: "3.8"
 services:
   frontend:
     container_name: wayshub-frontend
-    image: wilson/wayshub-frontend:latest
+    image: wilsonakbar/wayshub-frontend:latest
     stdin_open: true
     ports:
       - 13000:3000
@@ -138,7 +138,7 @@ services:
       - 13306:3306
   backend:
     container_name: wayshub-backend
-    image: wilson/wayshub-backend:latest
+    image: wilsonakbar/wayshub-backend:latest
     stdin_open: true
     ports:
       - 15000:5000
@@ -148,11 +148,10 @@ services:
 docker compose up
 ```
 ### 2.6 cek hasil docker kompose yang telah kita buat tadi
-![Screenshot_70](https://github.com/wilsonakbar/devops18-dumbways-WilsonAkbar/assets/132327628/9664cef5-727a-4f6e-ab46-346c1b7f5c63)
+![Screenshot_74](https://github.com/wilsonakbar/devops18-dumbways-WilsonAkbar/assets/132327628/fc5d54e6-fe1c-4343-8ce0-41b7bf770282)
 ```
 docker images
 ```
-![Screenshot_71](https://github.com/wilsonakbar/devops18-dumbways-WilsonAkbar/assets/132327628/51097c5d-eb81-4aa3-a6ba-ff98b37b2e7b)
 ```
 docker ps -a
 ```
