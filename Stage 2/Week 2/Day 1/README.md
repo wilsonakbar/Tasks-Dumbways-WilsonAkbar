@@ -166,6 +166,8 @@ lalukan pada semua image yang mau kita push
 ```
 docker push wilsonakbar/wayshub-frontend
 ```
+![Screenshot_76](https://github.com/wilsonakbar/devops18-dumbways-WilsonAkbar/assets/132327628/d35330b9-68b1-4384-8d99-1db640d383d6)
+cek file pada docker hub bila berhasil
 
 
 
