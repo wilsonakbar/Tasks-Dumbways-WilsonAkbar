@@ -147,10 +147,21 @@ services:
 ```
 docker compose up
 ```
-
-
-
+### 2.6 cek hasil docker kompose yang telah kita buat tadi
+![Screenshot_70](https://github.com/wilsonakbar/devops18-dumbways-WilsonAkbar/assets/132327628/9664cef5-727a-4f6e-ab46-346c1b7f5c63)
 ```
+docker images
+```
+![Screenshot_71](https://github.com/wilsonakbar/devops18-dumbways-WilsonAkbar/assets/132327628/51097c5d-eb81-4aa3-a6ba-ff98b37b2e7b)
+```
+docker ps -a
+```
+### 2.7 Push image ke hub Docker menggunakan akun masing-masing
+![Screenshot_72](https://github.com/wilsonakbar/devops18-dumbways-WilsonAkbar/assets/132327628/fd100983-97f3-44cf-a2d4-230833c5d0c8)
+```
+docker login
+```
+lalu masukan 
 nano Dockerfile
 ```
 ![image](https://github.com/wilsonakbar/devops18-dumbways-WilsonAkbar/assets/132327628/8e31ee57-a3fc-4482-b95e-030a570ce023)
