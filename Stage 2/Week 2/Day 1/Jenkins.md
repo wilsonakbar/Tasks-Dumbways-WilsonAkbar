@@ -1,6 +1,6 @@
 # Jenkins
 ## 1. Jalankan Jenkins on top Docker
-### 1.1 buat file sudo nano docker-compose.yml dan jalankan docker compose nya
+### 1.1 install Jenkins
 ![Screenshot_2](https://github.com/wilsonakbar/devops18-dumbways-WilsonAkbar/assets/132327628/d3003eb6-ba71-4742-9015-7268f5d602a2)
 ```
 sudo nano docker-compose.yml
@@ -58,8 +58,8 @@ masukan isi gembok pc kita lalu copy pada private key
 ![Screenshot_20](https://github.com/wilsonakbar/devops18-dumbways-WilsonAkbar/assets/132327628/e7241d4c-7cf4-4aef-b6c7-9ca8e1d368d1)
 ![Screenshot_21](https://github.com/wilsonakbar/devops18-dumbways-WilsonAkbar/assets/132327628/6c0e7aaa-d62e-4923-9401-4de96bcd2cf6)
 install ssh agent pada jenkins
-## 2. Pipeline untuk frontend & b
-### 2.1 Pull dari repository
+## 2. Pipeline untuk frontend & backend
+### 2.1 hubungkan jenkins dengan aplikasi frontend dan sambungkan frontend pada github dengan ssh
 buat nama Pipeline
 ![Screenshot_25](https://github.com/wilsonakbar/devops18-dumbways-WilsonAkbar/assets/132327628/9a172e56-4885-4435-9f79-b494ca70f90b)
 ceklist github hook trigger
