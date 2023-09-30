@@ -56,6 +56,122 @@ isi semua kolom nya
 masukan isi gembok pc kita lalu copy pada private key
 ![Screenshot_19](https://github.com/wilsonakbar/devops18-dumbways-WilsonAkbar/assets/132327628/b4bdf7af-991b-4b29-b909-5fd14824868a)
 ![Screenshot_20](https://github.com/wilsonakbar/devops18-dumbways-WilsonAkbar/assets/132327628/e7241d4c-7cf4-4aef-b6c7-9ca8e1d368d1)
+![Screenshot_21](https://github.com/wilsonakbar/devops18-dumbways-WilsonAkbar/assets/132327628/6c0e7aaa-d62e-4923-9401-4de96bcd2cf6)
+install ssh agent pada jenkins
 ## 2. Pipeline untuk frontend & b
-ackend
 ### 2.1 Pull dari repository
+buat nama Pipeline
+![Screenshot_25](https://github.com/wilsonakbar/devops18-dumbways-WilsonAkbar/assets/132327628/9a172e56-4885-4435-9f79-b494ca70f90b)
+ceklist github hook trigger
+![Screenshot_26](https://github.com/wilsonakbar/devops18-dumbways-WilsonAkbar/assets/132327628/82da8e97-5d68-439e-98fd-31757077dcfa)
+pada pilihan Definition pilih pipe SCM
+![Screenshot_27](https://github.com/wilsonakbar/devops18-dumbways-WilsonAkbar/assets/132327628/981a252d-5348-4629-97dd-0cd265034a82)
+pilih main untuk branch nya
+![Screenshot_28](https://github.com/wilsonakbar/devops18-dumbways-WilsonAkbar/assets/132327628/f94bdc19-7592-4e8e-910c-45994f2ddbff)
+![Screenshot_29](https://github.com/wilsonakbar/devops18-dumbways-WilsonAkbar/assets/132327628/47569f22-02c8-42d1-94fc-507d7f4f638a)
+pada bagian security pilih accept first connection
+![Screenshot_30](https://github.com/wilsonakbar/devops18-dumbways-WilsonAkbar/assets/132327628/0c0732d3-e157-4e73-a589-6aa14da92451)
+pada bagian setting github
+![Screenshot_31](https://github.com/wilsonakbar/devops18-dumbways-WilsonAkbar/assets/132327628/eb6e2cb2-8313-48bf-8063-678455eebbdb)
+```
+cat .\.ssh\id_rsa.pub
+```
+![Screenshot_32](https://github.com/wilsonakbar/devops18-dumbways-WilsonAkbar/assets/132327628/28ab91e1-3378-46f6-af59-2bdaee228766)
+masukan kunci ssh yang sudah kita salin kedalam github
+![Screenshot_33](https://github.com/wilsonakbar/devops18-dumbways-WilsonAkbar/assets/132327628/12da49e6-8795-44b8-9a6c-e02571c6d500)
+kemudian salin ssh direktori pada github
+![Screenshot_34](https://github.com/wilsonakbar/devops18-dumbways-WilsonAkbar/assets/132327628/431e4749-4c7e-4bda-90c4-edef7aca6e4e)
+pada direktori frontend kita remote ssh yang sudah di salin dari github
+![Screenshot_35](https://github.com/wilsonakbar/devops18-dumbways-WilsonAkbar/assets/132327628/6b8e4e26-17cf-447f-8aca-db00f5c1eadb)
+```
+git config --list
+```
+```
+cd wayshub-frontend/
+```
+```
+git config --list
+```
+```
+git remote -v
+```
+```
+git remote set-url origin git@github.com:wilsonakbar/wayshub-frontend.git
+```
+![Screenshot_36](https://github.com/wilsonakbar/devops18-dumbways-WilsonAkbar/assets/132327628/da8d189a-87e7-4ee3-bce8-7b6a6657ffa0)
+```
+git add .
+```
+```
+git status
+```
+```
+git commit -m "test"
+```
+![Screenshot_37](https://github.com/wilsonakbar/devops18-dumbways-WilsonAkbar/assets/132327628/ffa4200c-fe83-4326-a904-c83cbf5c55ab)
+```
+git config --global user.name "wilsonakbar"
+```
+```
+git config --global user.name "wilsonakbar2@gmail.com"
+```
+```
+ssh git@github.com -T
+```
+![Screenshot_38](https://github.com/wilsonakbar/devops18-dumbways-WilsonAkbar/assets/132327628/a1ecc307-2c62-4100-ae70-c9102b40eb9e)
+salin gembok ssh dari komputer kita
+![Screenshot_39](https://github.com/wilsonakbar/devops18-dumbways-WilsonAkbar/assets/132327628/3ecd5e26-2f05-4794-a256-9cf6a8d9c884)
+buat file id_rsa pada ssh di server kita lalu salin isi gembok nya
+```
+cd. ssh
+```
+```
+nano id_rsa
+```
+![Screenshot_40](https://github.com/wilsonakbar/devops18-dumbways-WilsonAkbar/assets/132327628/412bd3c1-9ef7-4657-ac88-15d7070c163b)
+kemudian masuk pada direktori frontend dan lalukan push
+![Screenshot_41](https://github.com/wilsonakbar/devops18-dumbways-WilsonAkbar/assets/132327628/ccf3487b-89a1-4485-8f58-59b3c97151c6)
+```
+cd wayshub-frontend/
+```
+```
+git push
+```
+![Screenshot_42](https://github.com/wilsonakbar/devops18-dumbways-WilsonAkbar/assets/132327628/de006f74-7a32-4810-b078-e0d671787ca0)
+direktory server frontend berhasil tersambung dengan direktory github
+![Screenshot_43](https://github.com/wilsonakbar/devops18-dumbways-WilsonAkbar/assets/132327628/e7d40289-62b2-4cef-9ad9-2a6e3d041e60)
+
+
+![Screenshot_45](https://github.com/wilsonakbar/devops18-dumbways-WilsonAkbar/assets/132327628/f1986136-0dfe-41ae-81d3-4a0bdd37bd6c)
+![Screenshot_46](https://github.com/wilsonakbar/devops18-dumbways-WilsonAkbar/assets/132327628/4e3c54af-9151-4847-b688-5876041705af)
+![Screenshot_47](https://github.com/wilsonakbar/devops18-dumbways-WilsonAkbar/assets/132327628/8a02411b-035a-4b74-808e-250dec1a7d6a)
+
+
+buat file Jenkins pada direktori frontend dengan script seperti ini
+![Screenshot_48](https://github.com/wilsonakbar/devops18-dumbways-WilsonAkbar/assets/132327628/5297fbc7-94b0-48d8-b0d8-d82fc48a461e)
+kemudian push file script Jenkins
+![Screenshot_44](https://github.com/wilsonakbar/devops18-dumbways-WilsonAkbar/assets/132327628/d4d71970-d58e-4e1e-9b00-41a129ccd3b8)
+git add
+```
+```
+git commit -m "test"
+```
+```
+git push
+```
+pada halaman jenkins kemudian kita trigger build
+![Screenshot_49](https://github.com/wilsonakbar/devops18-dumbways-WilsonAkbar/assets/132327628/3f7690de-d29c-4ebd-bbd6-3c71c04c8ab5)
+terakhir upload file pada dockerhub
+![Screenshot_50](https://github.com/wilsonakbar/devops18-dumbways-WilsonAkbar/assets/132327628/36aac4e1-d784-494c-9c76-27b522f0e9d4)
+
+
+
+
+
+
+
+
+
+
+
+
