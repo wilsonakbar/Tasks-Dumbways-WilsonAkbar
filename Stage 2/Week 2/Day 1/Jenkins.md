@@ -42,5 +42,20 @@ http://103.127.97.68:8080/
 ![Screenshot_10](https://github.com/wilsonakbar/devops18-dumbways-WilsonAkbar/assets/132327628/55308a2f-5989-4084-8c41-6fb3b99b3f76)
 ![Screenshot_11](https://github.com/wilsonakbar/devops18-dumbways-WilsonAkbar/assets/132327628/156b1d64-8237-40c0-a467-22c0fd63ee0b)
 nah ini adalah tampilan awal jenkins setelah selesai di install
-## 2. Pipeline untuk frontend & backend
+### 1.2 Sambungkan Jenkins ke Server
+![Screenshot_12](https://github.com/wilsonakbar/devops18-dumbways-WilsonAkbar/assets/132327628/d9d82d0d-4df2-4a2d-8f15-d0509db2e122)
+pada managemen jenkins pilih credentials
+![Screenshot_13](https://github.com/wilsonakbar/devops18-dumbways-WilsonAkbar/assets/132327628/172cdbf7-8eba-4b97-91ea-7b9556aa65dc)
+![Screenshot_14](https://github.com/wilsonakbar/devops18-dumbways-WilsonAkbar/assets/132327628/74748bba-e40d-4416-934e-be44852d0c41)
+![Screenshot_15](https://github.com/wilsonakbar/devops18-dumbways-WilsonAkbar/assets/132327628/144a4b5f-cdd8-45c0-bd6c-79677cff4ce6)
+![Screenshot_16](https://github.com/wilsonakbar/devops18-dumbways-WilsonAkbar/assets/132327628/df42963f-ddf3-458e-9e9c-d69d1be53e68)
+pilih SSH Username with private key
+![Screenshot_17](https://github.com/wilsonakbar/devops18-dumbways-WilsonAkbar/assets/132327628/d24544da-fd30-488f-867a-a544df062350)
+isi semua kolom nya
+![Screenshot_18](https://github.com/wilsonakbar/devops18-dumbways-WilsonAkbar/assets/132327628/ebf2b8fb-9790-4194-91f8-b7f61b23a45e)
+masukan isi gembok pc kita lalu copy pada private key
+![Screenshot_19](https://github.com/wilsonakbar/devops18-dumbways-WilsonAkbar/assets/132327628/b4bdf7af-991b-4b29-b909-5fd14824868a)
+![Screenshot_20](https://github.com/wilsonakbar/devops18-dumbways-WilsonAkbar/assets/132327628/e7241d4c-7cf4-4aef-b6c7-9ca8e1d368d1)
+## 2. Pipeline untuk frontend & b
+ackend
 ### 2.1 Pull dari repository
