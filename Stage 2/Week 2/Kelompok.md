@@ -334,14 +334,21 @@ pipeline {
 }
 ```
 kemudian buat Pipeline sama seperti setingan di atas dengan nama backend
+jalankan buiild now pada masing masing pipe
+![Screenshot_39](https://github.com/wilsonakbar/devops18-dumbways-WilsonAkbar/assets/132327628/9a24598c-82e8-40a5-b01f-1bd2ecbd7b0e)
+![Screenshot_40](https://github.com/wilsonakbar/devops18-dumbways-WilsonAkbar/assets/132327628/fd6fa2a4-f0b7-4af9-87fa-705cbaba6540)
+jika sukses stage view akan berwarna hijau
+![Screenshot_41](https://github.com/wilsonakbar/devops18-dumbways-WilsonAkbar/assets/132327628/9de4fc20-cba5-4ac8-92e3-cff1e13cef51)
+file berhasil di upload ke dockerhub
 
 
 
 
 
-
-
-
+## 1. Challenge
+### 1.1 Repository Private
+![Screenshot_32](https://github.com/wilsonakbar/devops18-dumbways-WilsonAkbar/assets/132327628/b6ed3d3d-b5ee-4f58-a429-fc498f9c2661)
+pada repository url salin SSH Github
 ![Screenshot_33](https://github.com/wilsonakbar/devops18-dumbways-WilsonAkbar/assets/132327628/5e47e337-432a-4580-9a1d-515a4f899171)
 bagian setting security
 ![Screenshot_34](https://github.com/wilsonakbar/devops18-dumbways-WilsonAkbar/assets/132327628/af574039-c8c9-47bf-a7de-afc6958d3c4a)
