@@ -155,7 +155,7 @@ add credentials
 ![Screenshot_23](https://github.com/wilsonakbar/devops18-dumbways-WilsonAkbar/assets/132327628/10a8975d-d0e9-440b-a1b8-502e182132d7)
 pilih SSH username with private key, isi username sesuai appserver yang ingin di sambungkan
 ![Screenshot_24](https://github.com/wilsonakbar/devops18-dumbways-WilsonAkbar/assets/132327628/0515bafa-38a1-4d75-bbda-23b92fd71029)
-salin private key
+salin private key yang ada pada pc kalian
 ![Screenshot_25](https://github.com/wilsonakbar/devops18-dumbways-WilsonAkbar/assets/132327628/1a6089d4-3b0e-4eac-8846-798fbf534802)
 credentials berhasil di buat
 ![Screenshot_26](https://github.com/wilsonakbar/devops18-dumbways-WilsonAkbar/assets/132327628/81597e7b-36fe-4043-b0d7-3443ff326c23)
@@ -163,9 +163,192 @@ jangan lupa tambahkan SSH Agent pada plugin dan install
 ![Screenshot_27](https://github.com/wilsonakbar/devops18-dumbways-WilsonAkbar/assets/132327628/a6de6cb5-2732-46ba-a649-38579cec004a)
 plugin SSH Agent berhasil ditambahkan
 ![Screenshot_28](https://github.com/wilsonakbar/devops18-dumbways-WilsonAkbar/assets/132327628/db8a3ee5-ad8b-4ee2-a2eb-aecb46a1daaa)
+### 5.1 Pipeline untuk frontend & backend
+buat file jenkins pada frontend
+![Screenshot_37](https://github.com/wilsonakbar/devops18-dumbways-WilsonAkbar/assets/132327628/2a127652-ca15-4732-a18b-f16f07f62a8c)
+```
+cd wayshub-frontend
+```
+```
+nano Jenkinsfile
+```
+![Screenshot_38](https://github.com/wilsonakbar/devops18-dumbways-WilsonAkbar/assets/132327628/1aa159d2-6e94-4ecd-8ed7-2cdf04ab865b)
+```
+def branch = "main"
+def repo = "https://github.com/wilsonakbar/wayshub-frontend.git"
+def cred = "ditoihkam"
+def dir = "~/wayshub-frontend"
+def server = "ditoihkam@103.175.221.143"
+def imagename = "wayshub-fe"
+def dockerusername = "wilsonakbar"
+
+pipeline {
+    agent any
+
+    stages {
+        stage('Pull From Repository') {
+            steps {
+                sshagent([cred]) {
+                    sh """ssh -o StrictHostKeyChecking=no ${server} << EOF
+                        cd ${dir}
+                        git remote add origin ${repo} || git remote set-url origin ${repo}
+                        git pull origin ${branch}
+                        exit
+                        EOF
+                    """
+                }
+            }
+        }
+
+    stage('Dockerize') {
+            steps {
+                sshagent([cred]) {
+                    sh """ssh -o StrictHostKeyChecking=no ${server} << EOF
+                        cd ${dir}
+                        docker build -t ${imagename}:latest .
+                        exit
+                        EOF
+                    """
+                }
+            }
+        }
+
+        stage('Deploy Docker') {
+            steps {
+                sshagent([cred]) {
+                    sh """ssh -o StrictHostKeyChecking=no ${server} << EOF
+                        cd ${dir}
+                        docker container stop ${imagename}
+                        docker container rm ${imagename}
+                        docker run -d -p 3000:3000 --name="${imagename}"  ${imagename}:latest
+                        docker container stop ${imagename}
+                        docker container rm ${imagename}
+                        exit
+                        EOF
+                    """
+                }
+            }
+        }
+
+        stage('Push to Docker Hub') {
+            steps {
+               sshagent([cred]) {
+                            sh """ssh -o StrictHostKeyChecking=no ${server} << EOF
+                                    docker tag ${imagename}:latest ${dockerusername}/${imagename}:latest
+                                    docker image push ${dockerusername}/${imagename}:latest
+                                    docker image rm ${dockerusername}/${imagename}:latest
+                                    docker image rm ${imagename}:latest
+                                    exit
+                    EOF
+                        """
+                        }
+            }
+        }
+    }
+}
+```
+buat Pipeline pada jenkins
+![Screenshot_29](https://github.com/wilsonakbar/devops18-dumbways-WilsonAkbar/assets/132327628/66a8f466-6d38-45b8-8733-e8bfacf5ef8e)
+masukan nama frontend lalu pilih Pipeline
+![Screenshot_30](https://github.com/wilsonakbar/devops18-dumbways-WilsonAkbar/assets/132327628/d0101351-c5c2-4194-864c-93fe3b109229)
+ceklis github hook trigger
+![Screenshot_31](https://github.com/wilsonakbar/devops18-dumbways-WilsonAkbar/assets/132327628/c258549c-04c0-4c1a-be9f-8e36aec5db6c)
+isi file repositori dengan url github
+![Screenshot_32_1](https://github.com/wilsonakbar/devops18-dumbways-WilsonAkbar/assets/132327628/f157d5f3-bbf2-494e-8479-9e313dd7a69a)
+pilih branch main dan apply
+
+lakukan hal yang sama pada direktori backend seperti cara di atas
+dengan file jenkins backend
+```
+def branch = "main"
+def repo = "https://github.com/wilsonakbar/wayshub-backend.git"
+def cred = "ditoihkam"
+def dir = "~/wayshub-backend"
+def server = "ditoihkam@103.175.221.143"
+def imagename = "wayshub-be"
+def dockerusername = "wilsonakbar"
+
+pipeline {
+    agent any
+
+    stages {
+        stage('Pull From Repository') {
+            steps {
+                sshagent([cred]) {
+                    sh """ssh -o StrictHostKeyChecking=no ${server} << EOF
+                        cd ${dir}
+                        git remote add origin ${repo} || git remote set-url origin ${repo}
+                        git pull origin ${branch}
+                        exit
+                        EOF
+                    """
+                }
+            }
+        }
+
+    stage('Dockerize') {
+            steps {
+                sshagent([cred]) {
+                    sh """ssh -o StrictHostKeyChecking=no ${server} << EOF
+                        cd ${dir}
+                        docker build -t ${imagename}:latest .
+                        exit
+                        EOF
+                    """
+                }
+            }
+        }
+
+        stage('Deploy Docker') {
+            steps {
+                sshagent([cred]) {
+                    sh """ssh -o StrictHostKeyChecking=no ${server} << EOF
+                        cd ${dir}
+                        docker container stop ${imagename}
+                        docker container rm ${imagename}
+                        docker run -d -p 5000:5000 --name="${imagename}"  ${imagename}:latest
+                        docker container stop ${imagename}
+                        docker container rm ${imagename}
+                        exit
+                        EOF
+                    """
+                }
+            }
+        }
+
+        stage('Push to Docker Hub') {
+            steps {
+               sshagent([cred]) {
+			    sh """ssh -o StrictHostKeyChecking=no ${server} << EOF
+				    docker tag ${imagename}:latest ${dockerusername}/${imagename}:latest
+				    docker image push ${dockerusername}/${imagename}:latest
+				    docker image rm ${dockerusername}/${imagename}:latest
+				    docker image rm ${imagename}:latest
+				    exit
+                    EOF
+			"""
+		        }
+            }
+        }
+    }
+}
+```
+kemudian buat Pipeline sama seperti setingan di atas dengan nama backend
 
 
 
+
+
+
+
+
+![Screenshot_33](https://github.com/wilsonakbar/devops18-dumbways-WilsonAkbar/assets/132327628/5e47e337-432a-4580-9a1d-515a4f899171)
+bagian setting security
+![Screenshot_34](https://github.com/wilsonakbar/devops18-dumbways-WilsonAkbar/assets/132327628/af574039-c8c9-47bf-a7de-afc6958d3c4a)
+host key nya pilih accept first connection
+![Screenshot_35](https://github.com/wilsonakbar/devops18-dumbways-WilsonAkbar/assets/132327628/4433f448-8745-49e6-aa56-d94bdd8c52ef)
+kemudian pada bagian ssh keys kita masukan kuci ssh server kita
+![Screenshot_36](https://github.com/wilsonakbar/devops18-dumbways-WilsonAkbar/assets/132327628/d888ffdd-35f6-476a-b0ec-a1ba64947caa)
 
 
 
