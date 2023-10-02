@@ -362,6 +362,7 @@ jika berhasil akan muncul Auto-Trigger build pada jenkins
 ![Screenshot_47](https://github.com/wilsonakbar/devops18-dumbways-WilsonAkbar/assets/132327628/3a257dea-4e6b-4656-8684-8f89ace5c44f)
 dan kita bisa cek recent deliveries dari hasil Auto-Trigger build di github nya
 ![Screenshot_48](https://github.com/wilsonakbar/devops18-dumbways-WilsonAkbar/assets/132327628/b2b88511-1d6d-467f-ae14-b4875f43ee64)
+jangan lupa lalukan langkah diatas untuk direktory backend nya sesuai petunjuk agar bisa Auto-Trigger build pipeline
 
 
 
