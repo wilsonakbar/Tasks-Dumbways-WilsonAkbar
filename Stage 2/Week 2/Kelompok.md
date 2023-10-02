@@ -1,4 +1,9 @@
 # Kelompok
+## Anggota
+Anggota :
+* Wilson - ()
+* [Ihkam Audito] - (https://github.com/DitoIhkam/devops17-dumbways-ihkam-audito/blob/eb1a211354d6126e6ef722b8466a96a030391dc4/Stage%202/Week%202%20Kelompok%20Docker.md)
+* [Jerry] - ()
 "CICD - NEO Lite SS2.2
 
 1. Jalankan Jenkins on top Docker
