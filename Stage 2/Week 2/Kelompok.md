@@ -346,7 +346,22 @@ jalankan buiild now pada masing masing pipe
 jika sukses stage view akan berwarna hijau
 ![Screenshot_41](https://github.com/wilsonakbar/devops18-dumbways-WilsonAkbar/assets/132327628/9de4fc20-cba5-4ac8-92e3-cff1e13cef51)
 file berhasil di upload ke dockerhub
-
+### 6.1 Auto-Trigger build pipeline setiap push di github
+pada repository di github pilih setting
+![Screenshot_42](https://github.com/wilsonakbar/devops18-dumbways-WilsonAkbar/assets/132327628/315f18cf-dbf5-44f1-b6c4-7d2e037cc224)
+kemudian kita add webhooks
+![Screenshot_43](https://github.com/wilsonakbar/devops18-dumbways-WilsonAkbar/assets/132327628/28be3826-93b8-46f2-95d5-ce92187296ca)
+isi payload URL
+![Screenshot_44](https://github.com/wilsonakbar/devops18-dumbways-WilsonAkbar/assets/132327628/29c9d18e-6074-4ec7-b3f6-30637146e911)
+```
+https://jen33.studentdumbways.my.id/github-webhook/
+```
+kemudian kita test dengan mengupdate git push dari direktori wayshub-frontend pada server
+![Screenshot_46](https://github.com/wilsonakbar/devops18-dumbways-WilsonAkbar/assets/132327628/5a7a2099-98dd-4d29-82c8-f8fad2d6ab66)
+jika berhasil akan muncul Auto-Trigger build pada jenkins
+![Screenshot_47](https://github.com/wilsonakbar/devops18-dumbways-WilsonAkbar/assets/132327628/3a257dea-4e6b-4656-8684-8f89ace5c44f)
+dan kita bisa cek recent deliveries dari hasil Auto-Trigger build di github nya
+![Screenshot_48](https://github.com/wilsonakbar/devops18-dumbways-WilsonAkbar/assets/132327628/b2b88511-1d6d-467f-ae14-b4875f43ee64)
 
 
 
