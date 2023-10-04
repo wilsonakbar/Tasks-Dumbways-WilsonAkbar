@@ -15,14 +15,31 @@ gunakan ansible-playbook
 - Gunakan docker-compose untuk deploy aplikasi wayshub-frontend
 
 ## Local
- install ubuntu pada WSL
+### install ubuntu pada WSL
 https://learn.microsoft.com/en-us/windows/wsl/install
-![Screenshot_1](https://github.com/wilsonakbar/devops18-dumbways-WilsonAkbar/assets/132327628/139be8b2-466b-45c8-859b-854682bc1d2b)
-```
-wsl --install
-```
-### install terraform pada ubuntu server
-https://developer.hashicorp.com/terraform/tutorials/docker-get-started/install-cli
 
-### install docker pada ubuntu server
-https://docs.docker.com/engine/install/ubuntu/
+### install ansible pada ubuntu
+https://docs.ansible.com/ansible/latest/installation_guide/installation_distros.html#installing-ansible-on-ubuntu
+
+### buat file ansible.cfg
+![Screenshot_2](https://github.com/wilsonakbar/devops18-dumbways-WilsonAkbar/assets/132327628/9e1ac28f-cf2c-4acc-bddf-20346291e224)
+
+### buat file Inventory
+saya membuat 3 server dan 3 gateway dimana semua user bernama wilson
+![Screenshot_3](https://github.com/wilsonakbar/devops18-dumbways-WilsonAkbar/assets/132327628/eaa195a5-ef34-4a73-a5da-532820efcf9e)
+```
+[server]
+172.21.201.11
+172.21.201.12
+172.21.201.13
+
+[gateway]
+172.21.201.21
+172.21.201.22
+172.21.201.23
+
+[all:vars]
+ansible_user="wilson"
+```
+### salin kunci publik yang ada di pc ke server lokal ubuntu
+![Screenshot_4](https://github.com/wilsonakbar/devops18-dumbways-WilsonAkbar/assets/132327628/5a805bad-4a2b-4973-894e-e538dd81a632)
