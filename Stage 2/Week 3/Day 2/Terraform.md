@@ -1,4 +1,4 @@
-# Terraform
+# Ansible
 ## 1. Buatlah terraform untuk mendeploy docker image wayshub-fe
 ## 2. Praktekkan penggunaan terraform dari pembuatan hingga resource di hancurkan
 
