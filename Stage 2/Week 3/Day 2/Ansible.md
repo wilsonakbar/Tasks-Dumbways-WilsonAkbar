@@ -61,3 +61,56 @@ test ping
 ```
 ansible all -m ping
 ```
+### Membuat user baru, gunakan login ssh key pada appserver dan gateway
+buat file nano user.yml pada direktori ansible lalu jalankan
+![Screenshot_11](https://github.com/wilsonakbar/devops18-dumbways-WilsonAkbar/assets/132327628/4a9ef1a3-cd67-429c-9afb-3197159064cd)
+```
+- become: true
+  gather_facts: false
+  hosts: all
+  vars:
+   - username: "akbar"
+   - password: ""
+
+  tasks:
+    - name: "Creating User"
+      ansible.builtin.user:
+        groups: sudo
+        name: "{{username}}"
+        password: "{{password}}"
+```
+```
+ansible-playbook user.yml
+```
+cek user baru pada pada appserver dan gateway
+![Screenshot_12](https://github.com/wilsonakbar/devops18-dumbways-WilsonAkbar/assets/132327628/b3c6aec4-7b64-4b18-a44e-6346ad97c6c4)
+```
+su akbar
+```
+```
+exec bash
+```
+### Instalasi nginx pada gateway
+buat file nano nginx.yml pada direktori ansible lalu jalankan
+![Screenshot_13](https://github.com/wilsonakbar/devops18-dumbways-WilsonAkbar/assets/132327628/1f3c9ec7-3282-4cca-affb-aa7f4ca15f90)
+```
+---
+- become: true
+  gather_facts: false
+  hosts: gateway
+  tasks:
+    - name: "Installing nginx"
+      apt:
+        name: nginx
+        state: latest
+        update_cache: yes
+    - name: start nginx
+      service:
+        name: nginx
+        state: started
+```
+```
+ansible-playbook nginx.yml
+```
+buka nginx dengan ip gateway pada browser
+![Screenshot_14](https://github.com/wilsonakbar/devops18-dumbways-WilsonAkbar/assets/132327628/c72b3997-0463-4ecd-9d5c-8f59090ae9f1)
