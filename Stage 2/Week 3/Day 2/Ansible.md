@@ -54,9 +54,9 @@ ssh-keygen
 ```
 cat id_rsa.pub
 ```
-![Screenshot_9](https://github.com/wilsonakbar/devops18-dumbways-WilsonAkbar/assets/132327628/3ecd2c95-e6d5-4095-af10-c261e360f788)
+![Screenshot_9](https://github.com/wilsonakbar/devops18-dumbways-WilsonAkbar/assets/132327628/3ecd2c95-e6d5-4095-af10-c261e360f788)  
 lalu salin ke authorized_keys yang ada di appserver dan gateway
-![Screenshot_10](https://github.com/wilsonakbar/devops18-dumbways-WilsonAkbar/assets/132327628/46f4798d-83b8-4baf-90c6-25fd8fd93893)
+![Screenshot_10](https://github.com/wilsonakbar/devops18-dumbways-WilsonAkbar/assets/132327628/46f4798d-83b8-4baf-90c6-25fd8fd93893)  
 test ping
 ```
 ansible all -m ping
