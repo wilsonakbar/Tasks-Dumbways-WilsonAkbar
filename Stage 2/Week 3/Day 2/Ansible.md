@@ -14,32 +14,50 @@ gunakan ansible-playbook
 - Buat konfigurasi proxy lalu masukkan kedalam gateway
 - Gunakan docker-compose untuk deploy aplikasi wayshub-frontend
 
-## Local
-### install ubuntu pada WSL
-https://learn.microsoft.com/en-us/windows/wsl/install
+### install multipass pada pc untuk menjalankan lokal
+[https://learn.microsoft.com/en-us/windows/wsl/install](https://multipass.run/install)
 
-### install ansible pada ubuntu
+### install ansible pada local ubuntu
 https://docs.ansible.com/ansible/latest/installation_guide/installation_distros.html#installing-ansible-on-ubuntu
-
-### buat file ansible.cfg
-![Screenshot_2](https://github.com/wilsonakbar/devops18-dumbways-WilsonAkbar/assets/132327628/9e1ac28f-cf2c-4acc-bddf-20346291e224)
-
-### buat file Inventory
-saya membuat 3 server dan 3 gateway dimana semua user bernama wilson
-![Screenshot_3](https://github.com/wilsonakbar/devops18-dumbways-WilsonAkbar/assets/132327628/eaa195a5-ef34-4a73-a5da-532820efcf9e)
+![Screenshot_6](https://github.com/wilsonakbar/devops18-dumbways-WilsonAkbar/assets/132327628/f45fd9aa-6ecc-4d75-b244-8d8258dc0fce)
 ```
-[server]
-172.21.201.11
-172.21.201.12
-172.21.201.13
+ansible --version
+```
+### buat buat direktori ansible dan file seperti berikut
+![Screenshot_8](https://github.com/wilsonakbar/devops18-dumbways-WilsonAkbar/assets/132327628/d775a191-8afd-4949-88e5-c6d4909ed6fd)
+ansible.cfg
+```
+[defaults]
+
+inventory = Inventory
+private_key_file = /home/ubuntu/.ssh/id_rsa
+host_key_checking = False
+interpreter_python = auto_silent
+```
+Inventory
+```
+[appserver]
+103.127.97.68
 
 [gateway]
-172.21.201.21
-172.21.201.22
-172.21.201.23
+103.127.97.70
 
 [all:vars]
 ansible_user="wilson"
 ```
-### salin kunci publik yang ada di pc ke server lokal ubuntu
-![Screenshot_4](https://github.com/wilsonakbar/devops18-dumbways-WilsonAkbar/assets/132327628/5a805bad-4a2b-4973-894e-e538dd81a632)
+### salin ssh private lokal ke authorized appserver dan gateway
+buat kunci ssh pada lokal bila belum ada
+![Screenshot_7](https://github.com/wilsonakbar/devops18-dumbways-WilsonAkbar/assets/132327628/ec09d0f2-cbfc-4560-86c5-432a4e5bbfed)
+```
+ssh-keygen
+```
+```
+cat id_rsa.pub
+```
+![Screenshot_9](https://github.com/wilsonakbar/devops18-dumbways-WilsonAkbar/assets/132327628/3ecd2c95-e6d5-4095-af10-c261e360f788)
+lalu salin ke authorized_keys yang ada di appserver dan gateway
+![Screenshot_10](https://github.com/wilsonakbar/devops18-dumbways-WilsonAkbar/assets/132327628/46f4798d-83b8-4baf-90c6-25fd8fd93893)
+test ping
+```
+ansible all -m ping
+```
