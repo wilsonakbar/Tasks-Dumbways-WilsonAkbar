@@ -90,6 +90,91 @@ su akbar
 ```
 exec bash
 ```
+### Instalasi Docker
+buat file nano install-docker.yml pada direktori ansible lalu jalankan
+![Screenshot_15](https://github.com/wilsonakbar/devops18-dumbways-WilsonAkbar/assets/132327628/7ad915ab-023c-4f04-a32a-61d252a6a4af)
+```
+---
+- become: true
+  gather_facts: false
+  hosts: all
+  tasks:
+    - name: Docker Dependencies
+      apt:
+        update_cache: true
+        name:
+          - ca-certificates
+          - curl
+          - gnupg
+          - lsb-release
+    - name: Docker GPG Key
+      apt_key:
+        url: https://download.docker.com/linux/ubuntu/gpg
+    - name: Docker Repository
+      apt_repository:
+        repo: deb https://download.docker.com/linux/ubuntu focal stable
+    - name: Docker Engine
+      apt:
+        update-cache: true
+        name:
+          - docker-ce
+          - docker-ce-cli
+          - containerd.io
+          - docker-compose-plugin
+    - name: Python Dependencies
+      apt:
+        name: python3-pip
+        state: latest
+        update_cache: true
+      become: true
+    - name: Docker SDK for Python
+      pip:
+        name: docker
+    - name: add user docker group
+      user:
+        name: wilson
+        groups: docker
+        append: yes
+```
+```
+ansible-playbook install-docker.yml
+```
+cek apa kah docker berhasil di instal pada appserver dan gateway
+![Screenshot_16](https://github.com/wilsonakbar/devops18-dumbways-WilsonAkbar/assets/132327628/dea82b4f-3d99-448d-88b3-ea2d6276c468)
+```
+docker -v
+```
+```
+sudo docker images
+```
+```
+sudo docker ps -a
+```
+### Instalasi node-exporter
+buat file nano install_node_exporter.yml pada direktori ansible lalu jalankan
+![Screenshot_17](https://github.com/wilsonakbar/devops18-dumbways-WilsonAkbar/assets/132327628/d0d355f9-ab31-49a9-9785-6a303e74e2ae)
+```
+- name: Deploy Node Exporter with Docker
+  hosts: appserver
+  become: true
+  tasks:
+    - name: Pull the bitnami/node-exporter Docker image
+      docker_image:
+        name: bitnami/node-exporter
+        source: pull
+
+    - name: Run the Node Exporter container
+      docker_container:
+        name: node-exp
+        image: bitnami/node-exporter
+        state: started
+        restart_policy: unless-stopped
+        published_ports:
+          - "9100:9100"
+```
+```
+ansible-playbook install_node_exporter.yml
+```
 ### Instalasi nginx pada gateway
 buat file nano nginx.yml pada direktori ansible lalu jalankan
 ![Screenshot_13](https://github.com/wilsonakbar/devops18-dumbways-WilsonAkbar/assets/132327628/1f3c9ec7-3282-4cca-affb-aa7f4ca15f90)
