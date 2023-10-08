@@ -15,7 +15,7 @@ terraform {
   required_providers {
     docker = {
       source  = "kreuzwerker/docker"
-      version = "~> 2.13.0"
+      version = "~> 2.15.0"
     }
   }
 }
@@ -23,7 +23,7 @@ terraform {
 provider "docker" {}
 
 resource "docker_image" "nginx" {
-  name         = "docker pull aimingds/wayshub-fe"
+  name         = "aimingds/wayshub-fe:latest"
   keep_locally = false
 }
 
@@ -38,7 +38,7 @@ resource "docker_container" "nginx" {
 ```
 ### lalu didalam direktori ./terraform/docker kita terraform 
 ```
-init -upgrade
+terraform init
 ```
 dan 
 ```
