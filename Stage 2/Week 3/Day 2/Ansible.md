@@ -175,6 +175,60 @@ buat file nano install_node_exporter.yml pada direktori ansible lalu jalankan
 ```
 ansible-playbook install_node_exporter.yml
 ```
+buka aplikasi pada browser dengan http://103.127.97.68:9100/
+![Screenshot_26](https://github.com/wilsonakbar/devops18-dumbways-WilsonAkbar/assets/132327628/c3bf93f7-0deb-4526-a20c-07117e6c2449)
+### buat konfigurasi prometheus dan Grafana lalu jalankan dengan On top docker
+buat file install_prometheus.yml pada direktory absible lalu jalankan
+```
+- name: prometheus on top docker
+  hosts: appserver
+  become: true
+  tasks:
+    - name: Pull the prometheus Docker image
+      docker_image:
+        name: bitnami/prometheus
+        source: pull
+
+    - name: Run the prometheus container
+      docker_container:
+        name: prometheus
+        image: bitnami/prometheus
+        state: started
+        restart_policy: unless-stopped
+        published_ports:
+          - "9090:9090"
+      ```
+```
+```
+ansible-playbook install_prometheus.yml
+```
+![Screenshot_29](https://github.com/wilsonakbar/devops18-dumbways-WilsonAkbar/assets/132327628/b9db4e82-27a7-429a-b642-2f85a545c8b2)
+buka aplikasi pada browser dengan ip http://103.127.97.68:9090/
+buat file install_grafana.yml pada direktory absible lalu jalankan
+```
+- name: Deploy grafana with Docker
+  hosts: appserver
+  become: true
+  tasks:
+    - name: Pull the grafana/grafana Docker image
+      docker_image:
+        name: grafana/grafana
+        source: pull
+
+    - name: Run the grafana container
+      docker_container:
+        name: grafana
+        image: grafana/grafana
+        state: started
+        restart_policy: unless-stopped
+        published_ports:
+          - "3000:3000"
+```
+```
+ansible-playbook install_grafana.yml
+```
+![Screenshot_30](https://github.com/wilsonakbar/devops18-dumbways-WilsonAkbar/assets/132327628/0170d634-1d62-4135-8d45-5e1597b77a74)
+buka aplikasi pada browser dengan ip http://103.127.97.68:3000/
 ### Instalasi nginx pada gateway
 buat file nano nginx.yml pada direktori ansible lalu jalankan
 ![Screenshot_13](https://github.com/wilsonakbar/devops18-dumbways-WilsonAkbar/assets/132327628/1f3c9ec7-3282-4cca-affb-aa7f4ca15f90)
@@ -193,9 +247,77 @@ buat file nano nginx.yml pada direktori ansible lalu jalankan
       service:
         name: nginx
         state: started
+    - name: copy proxy.conf
+      copy:
+        src: /home/ubuntu/ansible/proxy.conf
+        dest: /etc/nginx/sites-enabled/
+    - name: reloaded nginx
+      service:
+        name: nginx
+        state: reloaded
 ```
 ```
 ansible-playbook nginx.yml
 ```
-buka nginx dengan ip gateway pada browser
-![Screenshot_14](https://github.com/wilsonakbar/devops18-dumbways-WilsonAkbar/assets/132327628/c72b3997-0463-4ecd-9d5c-8f59090ae9f1)
+![Screenshot_28](https://github.com/wilsonakbar/devops18-dumbways-WilsonAkbar/assets/132327628/317a061f-3763-47ea-ae37-221c278a69cb)
+buka nginx pada browser dengan ip http://103.127.97.70/
+### Buat konfigurasi proxy dengan file proxy.conf di dalam direktori ansible lalu masukkan kedalam gateway
+![Screenshot_24](https://github.com/wilsonakbar/devops18-dumbways-WilsonAkbar/assets/132327628/d0274a39-4a8a-4b1a-b7b5-78a9789f978e)
+
+```
+server {
+    server_name wilson.studentdumbways.my.id;
+
+    location / {
+             proxy_pass http://103.127.97.70:3000;
+    }
+}
+server {
+    server_name prom.wilson.studentdumbways.my.id;
+
+    location / {
+             proxy_pass http://103.127.97.68:9090;
+    }
+}
+```
+```
+ansible-playbook nginx.yml
+```
+### Gunakan docker-compose untuk deploy aplikasi wayshub-frontend
+pertama buat file image wayshub-docker.yml pada direktori ansible lalu jalankan
+```
+- become: true
+  gather_facts: false
+  hosts: gateway
+  tasks:
+    - name: pull image
+      docker_image:
+       name: aimingds/wayshub-fe
+       source: pull
+    - name: copy docker compose
+      copy:
+        src: /home/ubuntu/ansible/docker-compose.yml
+        dest: /home/wilson/
+    - name: running docker compose
+      command: docker compose up -d
+```
+```
+ansible-playbook wayshub-docker.yml
+```
+![Screenshot_18](https://github.com/wilsonakbar/devops18-dumbways-WilsonAkbar/assets/132327628/63765488-95be-4bcf-bb13-bcf1dd76b70f)
+kemudian buat file docker-compose.yml untuk menjalankan aplikasi wayshub-frontend
+```
+version: "3.8"
+services:
+   frontend:
+    container_name: wayshub-fe
+    image: aimingds/wayshub-fe
+    stdin_open: true
+    ports:
+      - 3000:3000
+```
+```
+ansible-playbook docker-compose.yml
+```
+![Screenshot_27](https://github.com/wilsonakbar/devops18-dumbways-WilsonAkbar/assets/132327628/3d51bd5b-96f5-47e6-983e-68be976eb486)
+buka aplikasi pada browser dengan ip http://103.127.97.70:3000/login
