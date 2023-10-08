@@ -37,10 +37,13 @@ resource "docker_container" "nginx" {
 }
 ```
 ### lalu didalam direktori ./terraform/docker kita terraform 
+![Screenshot_28](https://github.com/wilsonakbar/devops18-dumbways-WilsonAkbar/assets/132327628/dde588a3-de98-4c6e-9fa4-87a726fbd1a0)
+
 ```
 terraform init
 ```
-dan 
+![Screenshot_10](https://github.com/wilsonakbar/devops18-dumbways-WilsonAkbar/assets/132327628/fb80154e-dd6c-4ea5-b07c-7f38e29218ac)
+
 ```
 terraform apply
 ```
