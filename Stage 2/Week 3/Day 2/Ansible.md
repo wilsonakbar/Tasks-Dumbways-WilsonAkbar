@@ -304,7 +304,7 @@ pertama buat file image wayshub-docker.yml pada direktori ansible lalu jalankan
 ```
 ansible-playbook wayshub-docker.yml
 ```
-![Screenshot_18](https://github.com/wilsonakbar/devops18-dumbways-WilsonAkbar/assets/132327628/63765488-95be-4bcf-bb13-bcf1dd76b70f) 
+![Screenshot_18](https://github.com/wilsonakbar/devops18-dumbways-WilsonAkbar/assets/132327628/63765488-95be-4bcf-bb13-bcf1dd76b70f)  
 kemudian buat file docker-compose.yml untuk menjalankan aplikasi wayshub-frontend
 ```
 version: "3.8"
