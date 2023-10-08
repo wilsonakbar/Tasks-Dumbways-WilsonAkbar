@@ -23,7 +23,7 @@ https://docs.ansible.com/ansible/latest/installation_guide/installation_distros.
 ```
 ansible --version
 ```
-### buat buat direktori ansible dan file seperti berikut
+### buat direktori ansible dan file seperti berikut
 ![Screenshot_8](https://github.com/wilsonakbar/devops18-dumbways-WilsonAkbar/assets/132327628/d775a191-8afd-4949-88e5-c6d4909ed6fd)
 ansible.cfg
 ```
