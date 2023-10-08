@@ -91,13 +91,13 @@ pertama buka alerting lalu pilih contract point
 isi nama dengan telegram  
 integration pilih telegram  
 ![Screenshot_16](https://github.com/wilsonakbar/devops18-dumbways-WilsonAkbar/assets/132327628/857f92e8-18b4-4b70-86f7-af8754a5fe63)  
-BOT API token dari untuk membuat bot dan akan mendapatkan token https://t.me/BotFather
+BOT API token dari untuk membuat bot dan akan mendapatkan token https://t.me/BotFather  
 ![Screenshot_15](https://github.com/wilsonakbar/devops18-dumbways-WilsonAkbar/assets/132327628/ee5ebfca-0278-4bec-a3c3-0dc343f1042c)  
-Chat ID didapat dari https://t.me/get_id_bot
+Chat ID didapat dari https://t.me/get_id_bot  
 ![Screenshot_17](https://github.com/wilsonakbar/devops18-dumbways-WilsonAkbar/assets/132327628/5ac833b8-4b45-41db-b66d-e0121edc913f)  
-lalu test dan akan muncul pesan firing dari BOT yang telah kita buat
+lalu test dan akan muncul pesan firing dari BOT yang telah kita buat  
 ![Screenshot_18](https://github.com/wilsonakbar/devops18-dumbways-WilsonAkbar/assets/132327628/c0eb723b-e835-4616-8ec2-4c87f28997b8)  
-pada notification policies edit default Contact Point menjadi telegram
+pada notification policies edit default Contact Point menjadi telegram  
 ### Untuk alert Usage over CPU & RAM
 pilih alert rules isi nama dan masukan query CPU
 ![Screenshot_19](https://github.com/wilsonakbar/devops18-dumbways-WilsonAkbar/assets/132327628/eb625458-9a03-4642-808e-9edfd9e45789)
