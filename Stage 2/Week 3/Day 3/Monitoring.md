@@ -115,12 +115,12 @@ pilih alert rules isi nama dan masukan query RAM
 ```
 100 * (1 - ((avg_over_time(node_memory_MemFree_bytes{}[10m]) + avg_over_time(node_memory_Cached_bytes{}[10m]) + avg_over_time(node_memory_Buffers_bytes{}[10m])) / avg_over_time(node_memory_MemTotal_bytes{}[10m])))
 ```
-![Screenshot_25](https://github.com/wilsonakbar/devops18-dumbways-WilsonAkbar/assets/132327628/bda4417e-efaf-4d72-af0e-339bfb9563e1)
-isi treshold menjadi 75
-![Screenshot_26](https://github.com/wilsonakbar/devops18-dumbways-WilsonAkbar/assets/132327628/8625849d-90c2-4704-a253-0a882b49e70d)
-kemudian save alert rules yang telah kita buat
+![Screenshot_25](https://github.com/wilsonakbar/devops18-dumbways-WilsonAkbar/assets/132327628/bda4417e-efaf-4d72-af0e-339bfb9563e1)  
+isi treshold menjadi 75  
+![Screenshot_26](https://github.com/wilsonakbar/devops18-dumbways-WilsonAkbar/assets/132327628/8625849d-90c2-4704-a253-0a882b49e70d)  
+kemudian save alert rules yang telah kita buat  
 ![Screenshot_27](https://github.com/wilsonakbar/devops18-dumbways-WilsonAkbar/assets/132327628/abfa440d-9684-4b8f-881a-f8eb634f59bb)  
-tunggu hingga ada pesan alert dari bot telegram
+tunggu hingga ada pesan alert dari bot telegram  
 
 
 
