@@ -119,7 +119,7 @@ pilih alert rules isi nama dan masukan query RAM
 isi treshold menjadi 75
 ![Screenshot_26](https://github.com/wilsonakbar/devops18-dumbways-WilsonAkbar/assets/132327628/8625849d-90c2-4704-a253-0a882b49e70d)
 kemudian save alert rules yang telah kita buat
-![Screenshot_27](https://github.com/wilsonakbar/devops18-dumbways-WilsonAkbar/assets/132327628/abfa440d-9684-4b8f-881a-f8eb634f59bb)
+![Screenshot_27](https://github.com/wilsonakbar/devops18-dumbways-WilsonAkbar/assets/132327628/abfa440d-9684-4b8f-881a-f8eb634f59bb)  
 tunggu hingga ada pesan alert dari bot telegram
 
 
