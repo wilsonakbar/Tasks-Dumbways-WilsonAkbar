@@ -59,7 +59,7 @@ docker run -d --name=grafana -p 5000:3000 grafana/grafana
 buka prometheus pada browser dengan ip http://103.127.97.70:5000/
 
 ### Dashboard untuk monitor resource server (CPU, RAM & Disk Usage)
-pertama kita buat data sources nya untuk menghubungkan prometheus dengan grafana
+pertama buat data sources nya untuk menghubungkan prometheus dengan grafana
 ![Screenshot_5](https://github.com/wilsonakbar/devops18-dumbways-WilsonAkbar/assets/132327628/8c1ad3ef-1bef-4328-98ca-19a7cdf5344d)
 pilih prometheus
 ![Screenshot_6](https://github.com/wilsonakbar/devops18-dumbways-WilsonAkbar/assets/132327628/f9a1713f-8b0b-4677-8c69-90afbbd42a9b)
@@ -83,3 +83,44 @@ buat panel untuk menampilkan DISK Usage dengan query lalu run query kemudian ini
 ```
 100 - (node_filesystem_avail_bytes{job="gateway"} / node_filesystem_size_bytes{job="gateway"} * 100)
 ```
+![Screenshot_12](https://github.com/wilsonakbar/devops18-dumbways-WilsonAkbar/assets/132327628/436e1361-b286-4080-8a38-396d1fcb3d16)
+
+### Buat alerting dengan Contact Point telegram
+pertama buka alerting lalu pilih contract point
+![Screenshot_14](https://github.com/wilsonakbar/devops18-dumbways-WilsonAkbar/assets/132327628/55ff1bed-0938-4eab-830c-526b909f32bd)
+isi nama dengan telegram
+integration pilih telegram
+![Screenshot_16](https://github.com/wilsonakbar/devops18-dumbways-WilsonAkbar/assets/132327628/857f92e8-18b4-4b70-86f7-af8754a5fe63)
+BOT API token dari untuk membuat bot dan akan mendapatkan token https://t.me/BotFather
+![Screenshot_15](https://github.com/wilsonakbar/devops18-dumbways-WilsonAkbar/assets/132327628/ee5ebfca-0278-4bec-a3c3-0dc343f1042c)
+Chat ID didapat dari https://t.me/get_id_bot
+![Screenshot_17](https://github.com/wilsonakbar/devops18-dumbways-WilsonAkbar/assets/132327628/5ac833b8-4b45-41db-b66d-e0121edc913f)
+lalu test dan akan muncul pesan firing dari BOT yang telah kita buat
+![Screenshot_18](https://github.com/wilsonakbar/devops18-dumbways-WilsonAkbar/assets/132327628/c0eb723b-e835-4616-8ec2-4c87f28997b8)
+pada notification policies edit default Contact Point menjadi telegram
+### Untuk alert Usage over CPU & RAM
+pilih alert rules isi nama dan masukan query CPU
+![Screenshot_19](https://github.com/wilsonakbar/devops18-dumbways-WilsonAkbar/assets/132327628/eb625458-9a03-4642-808e-9edfd9e45789)
+```
+100 - (avg by (instance) (irate(node_cpu_seconds_total{mode="idle"}[5m])) * 100)
+```
+![Screenshot_20](https://github.com/wilsonakbar/devops18-dumbways-WilsonAkbar/assets/132327628/d4f78040-4ce2-49ba-a411-c6c7682acdcd)
+isi treshold menjadi 20
+![Screenshot_21](https://github.com/wilsonakbar/devops18-dumbways-WilsonAkbar/assets/132327628/4ad95e76-a224-47b5-9425-878810d0c82e)
+pilih folder gateway dan pilih evaluation group RAM kemudian isi pesan pada add annotation CPU Usage over 20% kemudian save
+
+![Screenshot_23](https://github.com/wilsonakbar/devops18-dumbways-WilsonAkbar/assets/132327628/b17b85b3-f321-4654-a9e4-1dc3402ad33c)
+pilih alert rules isi nama dan masukan query RAM
+![Screenshot_24](https://github.com/wilsonakbar/devops18-dumbways-WilsonAkbar/assets/132327628/0b6f80c3-5a0e-4c30-98b2-ae240fe87db3)
+```
+100 * (1 - ((avg_over_time(node_memory_MemFree_bytes{}[10m]) + avg_over_time(node_memory_Cached_bytes{}[10m]) + avg_over_time(node_memory_Buffers_bytes{}[10m])) / avg_over_time(node_memory_MemTotal_bytes{}[10m])))
+```
+![Screenshot_25](https://github.com/wilsonakbar/devops18-dumbways-WilsonAkbar/assets/132327628/bda4417e-efaf-4d72-af0e-339bfb9563e1)
+isi treshold menjadi 75
+![Screenshot_26](https://github.com/wilsonakbar/devops18-dumbways-WilsonAkbar/assets/132327628/8625849d-90c2-4704-a253-0a882b49e70d)
+kemudian save alert rules yang telah kita buat
+![Screenshot_27](https://github.com/wilsonakbar/devops18-dumbways-WilsonAkbar/assets/132327628/abfa440d-9684-4b8f-881a-f8eb634f59bb)
+tunggu hingga ada pesan alert dari bot telegram
+
+
+
