@@ -320,4 +320,4 @@ services:
 ansible-playbook docker-compose.yml
 ```
 ![Screenshot_27](https://github.com/wilsonakbar/devops18-dumbways-WilsonAkbar/assets/132327628/3d51bd5b-96f5-47e6-983e-68be976eb486)
-buka aplikasi pada browser dengan ip http://103.127.97.70:3000/login
+buka aplikasi pada browser dengan ip http://103.127.97.70:3000/
