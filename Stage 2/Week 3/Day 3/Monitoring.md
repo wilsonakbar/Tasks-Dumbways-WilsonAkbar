@@ -88,8 +88,8 @@ buat panel untuk menampilkan DISK Usage dengan query lalu run query kemudian ini
 ### Buat alerting dengan Contact Point telegram
 pertama buka alerting lalu pilih contract point
 ![Screenshot_14](https://github.com/wilsonakbar/devops18-dumbways-WilsonAkbar/assets/132327628/55ff1bed-0938-4eab-830c-526b909f32bd)  
-isi nama dengan telegram
-integration pilih telegram
+isi nama dengan telegram  
+integration pilih telegram  
 ![Screenshot_16](https://github.com/wilsonakbar/devops18-dumbways-WilsonAkbar/assets/132327628/857f92e8-18b4-4b70-86f7-af8754a5fe63)  
 BOT API token dari untuk membuat bot dan akan mendapatkan token https://t.me/BotFather
 ![Screenshot_15](https://github.com/wilsonakbar/devops18-dumbways-WilsonAkbar/assets/132327628/ee5ebfca-0278-4bec-a3c3-0dc343f1042c)  
