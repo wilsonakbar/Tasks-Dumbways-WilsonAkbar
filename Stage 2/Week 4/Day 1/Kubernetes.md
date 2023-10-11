@@ -120,3 +120,61 @@ kemudian jalankan service yang sudah kita deploy
 minikube service nginx-deployment
 ```
 ![Screenshot_10](https://github.com/wilsonakbar/devops18-dumbways-WilsonAkbar/assets/132327628/83d87b3a-725a-43ef-a108-4b371a0c6eb3)
+### deploy wayshub-frontend menggunakan file yml minikube
+buat file deploy-frontend
+![Screenshot_11](https://github.com/wilsonakbar/devops18-dumbways-WilsonAkbar/assets/132327628/057a02db-86f3-4bf5-b796-0c442f50aebe)
+```
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: frontend-deployment
+  labels:
+    app: frontend
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: frontend
+  template:
+    metadata:
+      labels:
+        app: frontend
+    spec:
+      containers:
+        - name: wayshub-frontend
+          image: aimingds/wayshub-fe
+          ports:
+            - containerPort: 3000
+```
+buat file expose-frontend
+![Screenshot_12](https://github.com/wilsonakbar/devops18-dumbways-WilsonAkbar/assets/132327628/a3741188-5f84-4adb-b65b-5b47f4ca3ac2)
+```
+apiVersion: v1
+kind: Service
+
+metadata:
+  name: frontend-deployment
+spec:
+  type: NodePort
+  selector:
+    app: frontend
+  ports:
+    - name: exposeport
+      protocol: TCP
+      port: 3000
+      targetPort: 3000
+```
+apply file yml yang telah kita buat
+![Screenshot_13](https://github.com/wilsonakbar/devops18-dumbways-WilsonAkbar/assets/132327628/27c14b4e-2dc3-4b80-b844-a3cb65fede47)
+```
+kubectl apply -f .\deploy-frontend.yml
+```
+```
+kubectl apply -f .\expose-frontend.yml
+```
+jalankan service nya
+![Screenshot_14](https://github.com/wilsonakbar/devops18-dumbways-WilsonAkbar/assets/132327628/534ef239-2e19-4b10-a539-ed0cbe07cd49)
+```
+minikube service frontend-deployment
+```
+![Screenshot_15](https://github.com/wilsonakbar/devops18-dumbways-WilsonAkbar/assets/132327628/958add41-4048-44de-a575-a4cfec1daec6)
