@@ -172,6 +172,11 @@ kubectl apply -f .\deploy-frontend.yml
 ```
 kubectl apply -f .\expose-frontend.yml
 ```
+cek deploy dan service yang telah dibuat
+![Screenshot_16](https://github.com/wilsonakbar/devops18-dumbways-WilsonAkbar/assets/132327628/72cfa046-9902-4f65-b2a1-bfbedfb7e4bc)
+```
+kubectl get all
+```
 jalankan service nya
 ![Screenshot_14](https://github.com/wilsonakbar/devops18-dumbways-WilsonAkbar/assets/132327628/534ef239-2e19-4b10-a539-ed0cbe07cd49)
 ```
