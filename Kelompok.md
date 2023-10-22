@@ -26,7 +26,7 @@ Challenge
 ```
 nano docker-compose.yml
 ```
-buat perintah seperti ini
+buat perintah seperti ini  
 ![Screenshot_2](https://github.com/wilsonakbar/devops18-dumbways-WilsonAkbar/assets/132327628/e7c57a2f-b026-40f2-a1ad-623062f9a572)
 ```
 version: '3.8'
