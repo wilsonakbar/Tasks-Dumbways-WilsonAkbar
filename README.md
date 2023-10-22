@@ -30,4 +30,4 @@
 ### [Task Day 1 - Kubernetes : First Setup](https://github.com/wilsonakbar/Tasks-Dumbways-WilsonAkbar/blob/439e4d3191948a4d4db8b9b91e38ce931012464f/Stage%202/Week%204/Day%201/Kubernetes.md)
 ### [Task Day 2 - Kubernetes : Deployments](https://github.com/wilsonakbar/Tasks-Dumbways-WilsonAkbar/blob/d1f74f25aa1f4f815bde64d352500226efb0ea1a/Stage%202/Week%204/Day%202/deploy.md)
 
-### [Kelompok](https://github.com/wilsonakbar/Tasks-Dumbways-WilsonAkbar/blob/e432242f98d8c761809e81ef3b00a3a899cd8d6f/Kelompok.md)
+## [Kelompok](https://github.com/wilsonakbar/Tasks-Dumbways-WilsonAkbar/blob/e432242f98d8c761809e81ef3b00a3a899cd8d6f/Kelompok.md)
