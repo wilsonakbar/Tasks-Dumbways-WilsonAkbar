@@ -1,9 +1,9 @@
 # Kelompok
 ## Anggota
 Anggota :
-* Wilson - [Jenkins](https://github.com/wilsonakbar/devops18-dumbways-WilsonAkbar/blob/a18dd9572b233ce31a3a531d3c3d13107cbea43a/Stage%202/Week%202/Kelompok.md)
+* Wilson Akbar- [Jenkins](https://github.com/wilsonakbar/Tasks-Dumbways-WilsonAkbar/blob/e432242f98d8c761809e81ef3b00a3a899cd8d6f/Kelompok.md)
 * Ihkam Audito - [Docker](https://github.com/DitoIhkam/devops17-dumbways-ihkam-audito/blob/eb1a211354d6126e6ef722b8466a96a030391dc4/Stage%202/Week%202%20Kelompok%20Docker.md)
-* Jerry - [Proxy and SSL](https://github.com/jerryfernando/devops18-dumbways-JeriFernando/blob/46692dec73909547dcfbd670b96efdaf6a100dc5/stage-2/week-2/proxy-and-SSL/readme.md)
+* Jerry Fernando - [Proxy and SSL](https://github.com/jerryfernando/devops18-dumbways-JeriFernando/blob/46692dec73909547dcfbd670b96efdaf6a100dc5/stage-2/week-2/proxy-and-SSL/readme.md)
 "CICD - NEO Lite SS2.2
 
 1. Jalankan Jenkins on top Docker
@@ -43,7 +43,7 @@ services:
       volumes:
          - ~/jenkins:/var/jenkins_home
 ```
-jalankan docker kompose
+jalankan docker kompose  
 ![Screenshot_3](https://github.com/wilsonakbar/devops18-dumbways-WilsonAkbar/assets/132327628/2b59120e-30d1-425a-8570-8e9449234902)
 ```
 docker compose up -d
@@ -169,7 +169,7 @@ jangan lupa tambahkan SSH Agent pada plugin dan install
 plugin SSH Agent berhasil ditambahkan
 ![Screenshot_28](https://github.com/wilsonakbar/devops18-dumbways-WilsonAkbar/assets/132327628/db8a3ee5-ad8b-4ee2-a2eb-aecb46a1daaa)
 ### 5.1 Pipeline untuk frontend & backend
-buat file jenkins pada frontend
+buat file jenkins pada frontend  
 ![Screenshot_37](https://github.com/wilsonakbar/devops18-dumbways-WilsonAkbar/assets/132327628/2a127652-ca15-4732-a18b-f16f07f62a8c)
 ```
 cd wayshub-frontend
