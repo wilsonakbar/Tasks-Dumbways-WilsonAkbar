@@ -3,7 +3,7 @@
 Anggota :
 * Wilson Akbar- [Jenkins](https://github.com/wilsonakbar/Tasks-Dumbways-WilsonAkbar/blob/e432242f98d8c761809e81ef3b00a3a899cd8d6f/Kelompok.md)
 * Ihkam Audito - [Docker](https://github.com/DitoIhkam/devops17-dumbways-ihkam-audito/blob/eb1a211354d6126e6ef722b8466a96a030391dc4/Stage%202/Week%202%20Kelompok%20Docker.md)
-* Jerry Fernando - [Proxy and SSL](https://github.com/jerryfernando/devops18-dumbways-JeriFernando/blob/46692dec73909547dcfbd670b96efdaf6a100dc5/stage-2/week-2/proxy-and-SSL/readme.md)
+* Jerry Fernando - [Proxy and SSL](https://github.com/jerryfernando/devops18-dumbways-JeriFernando/blob/46692dec73909547dcfbd670b96efdaf6a100dc5/stage-2/week-2/proxy-and-SSL/readme.md)  
 "CICD - NEO Lite SS2.2
 
 1. Jalankan Jenkins on top Docker
